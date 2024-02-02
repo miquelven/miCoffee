@@ -1,0 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  background-color: #332933;
+}
+header div {
+  max-width: 1040px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #423442;
+  color: #fdfdfd;
+}/*# sourceMappingURL=main.css.map */

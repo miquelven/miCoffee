@@ -1,8 +1,8 @@
-# MiCoffee
+# MiCoffee ☕
 
 #### Realizado com o intuito de fazer uma aplicação Nuxt 3 bem estruturada, consumir várias APIs e práticar Typescript e Scss.
 
-###### Projeto criado para fazer parte do portifólio.
+#### Projeto criado para fazer parte do portifólio.
 
 &nbsp;
 

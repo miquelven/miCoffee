@@ -1,7 +1,5 @@
 <template>
   <Header />
-  <ul>
-    sdfsdfsd
-    <slot />
-  </ul>
+  <slot />
+  <Footer />
 </template>

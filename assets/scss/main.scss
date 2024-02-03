@@ -4,12 +4,23 @@
   box-sizing: border-box;
 }
 
-@import "./partials/colors";
-@import "./partials/header";
-
 body {
   font-family: "Lato", sans-serif;
   background-color: $dark-primary;
   color: #fdfdfd;
   overflow-x: hidden;
 }
+
+.container,
+#content {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+#content {
+  min-height: 100vh;
+}
+
+@import "./partials/colors";
+@import "./partials/header";
+@import "./partials/footer";

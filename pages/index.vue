@@ -1,6 +1,4 @@
-<template>
-  <div>asdfasdf</div>
-</template>
+<template></template>
 
 <script setup>
 definePageMeta({

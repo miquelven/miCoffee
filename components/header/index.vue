@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="container">
-      <h1><span>Mi</span>Coffee</h1>
+      <h1 @click="$router.push('/')"><span>Mi</span>Coffee</h1>
       <div id="searchArea">
         <input type="text" />
         <Icon name="uil:search" color="white" id="searchIcon" />

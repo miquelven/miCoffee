@@ -1,3 +1,3 @@
-<template>página contato</template>
+<template><div>Conteudo contato</div></template>
 
 <script setup></script>

@@ -1,6 +1,6 @@
 <template>
-  <nav v-if="!props.mobile">
-    <ul class="menu">
+  <nav>
+    <ul class="menu" id="menuDesktop">
       <li v-for="(route, index) in props.routes" :key="index">
         <NuxtLink :to="route.path">
           <a href="#">{{ route.label }}</a>
@@ -8,7 +8,7 @@
       </li>
     </ul>
   </nav>
-  <nav v-else id="menuBar" ref="menuBar">
+  <nav id="menuBar" ref="menuBar">
     <span
       id="menuIcon"
       ref="menuIcon"
@@ -36,7 +36,7 @@
 <script setup lang="ts">
 import { onMounted, watch, ref } from "vue";
 
-const props = defineProps(["mobile", "routes"]);
+const props = defineProps(["routes"]);
 
 const showMenu = ref<boolean>(false);
 const menuBar = ref<HTMLElement | null>(null);

@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div>
+    <div class="container">
       <h1><span>Mi</span>Coffee</h1>
       <div id="searchArea">
         <input type="text" />

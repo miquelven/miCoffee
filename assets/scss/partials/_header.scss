@@ -3,9 +3,7 @@ header {
   padding: 10px 0;
   background-color: $dark-secondary;
   margin-bottom: 40px;
-  div {
-    max-width: 1040px;
-    margin: auto;
+  .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,7 +36,8 @@ header {
     }
     #searchIcon {
       position: absolute;
-      right: 10px;
+      right: 13px;
+      top: 7px;
     }
   }
 

@@ -6,7 +6,9 @@
 
 header {
   width: 100%;
+  padding: 10px 0;
   background-color: #332933;
+  margin-bottom: 40px;
 }
 header div {
   max-width: 1040px;
@@ -15,9 +17,129 @@ header div {
   justify-content: space-between;
   align-items: center;
 }
+header h1 {
+  margin-left: 10px;
+  color: #754574;
+  cursor: pointer;
+}
+header h1 span {
+  font-size: 1.2rem;
+  margin-right: 2px;
+  color: #a842a5;
+}
+header #searchArea {
+  position: relative;
+  width: 35%;
+}
+header #searchArea input {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 0;
+  outline: none;
+  padding: 6px 8px;
+  font-size: 1rem;
+  color: white;
+  border-radius: 7px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+header #searchArea #searchIcon {
+  position: absolute;
+  right: 10px;
+}
+@media screen and (max-width: 440px) {
+  header #searchArea {
+    display: none;
+  }
+}
+header .menu {
+  display: flex;
+  text-align: center;
+}
+header .menu span {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+header .menu li {
+  list-style: none;
+}
+header .menu li a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  position: relative;
+}
+header .menu li a:hover {
+  color: #ffffff;
+}
+header .menu li a::before {
+  content: "";
+  position: absolute;
+  background-color: #a842a5;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 20px;
+  opacity: 0;
+  transition: all ease-in 0.3s;
+}
+header .menu li a:hover::before {
+  width: 50%;
+  opacity: 1;
+}
+
+#menuBar {
+  position: absolute;
+  top: 0px;
+  right: -170px;
+  z-index: 99;
+  transition: all ease-in 0.3s;
+}
+#menuBar .icon {
+  position: absolute;
+  cursor: pointer;
+}
+#menuBar #menuIcon {
+  right: 210px;
+  top: 20px;
+}
+#menuBar #closeIcon {
+  right: 5px;
+  top: 10px;
+}
+#menuBar ul {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  width: 170px;
+  height: 100vh;
+  background: rgba(44, 44, 44, 0.6196078431);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+#menuBar ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: ease 300ms;
+}
+#menuBar ul li a {
+  color: rgba(255, 255, 255, 0.7176470588);
+}
+#menuBar ul li a:hover {
+  color: #fff;
+  font-weight: 700;
+}
+#menuBar ul li a::before {
+  display: none;
+}
+#menuBar ul li:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
 
 body {
   font-family: "Lato", sans-serif;
   background-color: #423442;
   color: #fdfdfd;
+  overflow-x: hidden;
 }/*# sourceMappingURL=main.css.map */

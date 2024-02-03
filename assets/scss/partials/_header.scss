@@ -1,0 +1,141 @@
+header {
+  width: 100%;
+  padding: 10px 0;
+  background-color: $dark-secondary;
+  margin-bottom: 40px;
+  div {
+    max-width: 1040px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  h1 {
+    margin-left: 10px;
+    color: $tertiary;
+    cursor: pointer;
+    span {
+      font-size: 1.2rem;
+      margin-right: 2px;
+      color: $primary;
+    }
+  }
+
+  #searchArea {
+    position: relative;
+    width: 35%;
+    input {
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 0;
+      outline: none;
+      padding: 6px 8px;
+      font-size: 1rem;
+      color: white;
+      border-radius: 7px;
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    }
+    #searchIcon {
+      position: absolute;
+      right: 10px;
+    }
+  }
+
+  @media screen and (max-width: 440px) {
+    #searchArea {
+      display: none;
+    }
+  }
+
+  .menu {
+    display: flex;
+    text-align: center;
+
+    span {
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    li {
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: #ffffffcc;
+        padding: 10px;
+        position: relative;
+      }
+      a:hover {
+        color: #ffffff;
+      }
+      a::before {
+        content: "";
+        position: absolute;
+        background-color: $primary;
+        width: 0;
+        height: 3px;
+        bottom: 0;
+        left: 20px;
+        opacity: 0;
+        transition: all ease-in 0.3s;
+      }
+      a:hover::before {
+        width: 50%;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+#menuBar {
+  position: absolute;
+  top: 0px;
+  right: -170px;
+  z-index: 99;
+  transition: all ease-in 0.3s;
+
+  .icon {
+    position: absolute;
+    cursor: pointer;
+  }
+
+  #menuIcon {
+    right: 210px;
+    top: 20px;
+  }
+  #closeIcon {
+    right: 5px;
+    top: 10px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    width: 170px;
+    height: 100vh;
+    background: #2c2c2c9e;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: ease 300ms;
+      a {
+        color: #ffffffb7;
+      }
+      a:hover {
+        color: #fff;
+        font-weight: 700;
+      }
+      a::before {
+        display: none;
+      }
+    }
+    li:hover {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+}

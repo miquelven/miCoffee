@@ -4,11 +4,12 @@
   box-sizing: border-box;
 }
 
-@import "./colors";
-@import "./header";
+@import "./partials/colors";
+@import "./partials/header";
 
 body {
   font-family: "Lato", sans-serif;
   background-color: $dark-primary;
   color: #fdfdfd;
+  overflow-x: hidden;
 }

@@ -1,6 +1,7 @@
 #hero {
   display: flex;
   align-items: center;
+  position: relative;
 
   #leftSide,
   #rightSide {
@@ -31,6 +32,56 @@
       font-size: 1.2rem;
       text-shadow: 2px 4px 6px #000;
     }
+
+    @media screen and (max-width: 1040px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      .purple-text-primary {
+        font-size: 3rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    @media screen and (max-width: 840px) {
+      h1 {
+        font-size: 1.7rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    #leftSide {
+      position: relative;
+      z-index: 2;
+
+      h1,
+      p {
+        text-align: center;
+      }
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    #leftSide {
+      h1 {
+        font-size: 1.3rem;
+        text-align: center;
+      }
+      .purple-text-primary {
+        font-size: 1.8rem;
+      }
+      p {
+        text-align: center;
+        font-size: 0.8rem;
+      }
+    }
   }
 
   #rightSide {
@@ -44,6 +95,19 @@
         $dark-primary 20%,
         $dark-secondary 40%
       );
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    #rightSide {
+      position: absolute;
+      z-index: -1;
+      opacity: 70%;
+      top: 10px;
+
+      img {
+        opacity: 15%;
+      }
     }
   }
 }

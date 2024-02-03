@@ -4,15 +4,30 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #423442;
+  color: #fdfdfd;
+  overflow-x: hidden;
+}
+
+.container,
+#content {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+#content {
+  min-height: 100vh;
+}
+
 header {
   width: 100%;
   padding: 10px 0;
   background-color: #332933;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
-header div {
-  max-width: 1040px;
-  margin: auto;
+header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,7 +59,8 @@ header #searchArea input {
 }
 header #searchArea #searchIcon {
   position: absolute;
-  right: 10px;
+  right: 13px;
+  top: 7px;
 }
 @media screen and (max-width: 440px) {
   header #searchArea {
@@ -138,9 +154,103 @@ header .menu li a:hover::before {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-body {
-  font-family: "Lato", sans-serif;
-  background-color: #423442;
-  color: #fdfdfd;
-  overflow-x: hidden;
+footer {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#hero {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#hero #leftSide,
+#hero #rightSide {
+  flex: 1;
+}
+#hero #leftSide {
+  text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.6431372549);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+#hero #leftSide .purple-text-primary {
+  color: #db2ad5;
+  text-shadow: 2px 4px 6px #000;
+  font-size: 3.6rem;
+}
+#hero #leftSide .purple-text-secondary {
+  color: #a842a5;
+  text-shadow: 2px 4px 6px #000;
+}
+#hero #leftSide h1 {
+  font-size: 2.8rem;
+  margin-bottom: 70px;
+  font-weight: bold;
+}
+#hero #leftSide p {
+  color: rgba(255, 255, 255, 0.6705882353);
+  font-size: 1.2rem;
+  text-shadow: 2px 4px 6px #000;
+}
+@media screen and (max-width: 1040px) {
+  #hero #leftSide h1 {
+    font-size: 2.2rem;
+  }
+  #hero #leftSide .purple-text-primary {
+    font-size: 3rem;
+  }
+  #hero #leftSide p {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 840px) {
+  #hero #leftSide h1 {
+    font-size: 1.7rem;
+  }
+  #hero #leftSide p {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  #hero #leftSide {
+    position: relative;
+    z-index: 99;
+  }
+  #hero #leftSide h1,
+  #hero #leftSide p {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 420px) {
+  #hero h1 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  #hero .purple-text-primary {
+    font-size: 10px;
+    color: #f00;
+  }
+  #hero p {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+}
+#hero #rightSide img {
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 50%;
+  box-shadow: 4px 6px 10px #000;
+  background: linear-gradient(to bottom, #423442 20%, #332933 40%);
+}
+@media screen and (max-width: 640px) {
+  #hero #rightSide {
+    position: absolute;
+    z-index: -1;
+    opacity: 70%;
+    top: 10px;
+  }
+  #hero #rightSide img {
+    opacity: 15%;
+  }
 }/*# sourceMappingURL=main.css.map */

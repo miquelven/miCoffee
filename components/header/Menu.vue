@@ -22,7 +22,7 @@
     </span>
     <ul class="menu">
       <span>Menu</span>
-      <input type="text" v-if="showInput" />
+      <input type="text" id="input" />
 
       <li v-for="(route, index) in props.routes" :key="index">
         <NuxtLink :to="route.path">
@@ -42,46 +42,18 @@ const showMenu = ref<boolean>(false);
 const menuBar = ref<HTMLElement | null>(null);
 const menuIcon = ref<HTMLElement | null>(null);
 const closeIcon = ref<HTMLElement | null>(null);
-const showInput = ref<boolean>(false);
 
 watch(showMenu, () => {
   if (showMenu.value == true) {
-    menuBar.value!.style.right = "0px;";
-    menuIcon.value!.style.opacity = "0";
+    menuBar.value!.style.right = "0px";
+    menuIcon.value!.style.display = "none";
     closeIcon.value!.style.display = "block";
   } else {
     menuBar.value!.style.right = "-170px";
     closeIcon.value!.style.display = "none";
-    setTimeout(() => (menuIcon.value!.style.opacity = "1"), 300);
+    setTimeout(() => {
+      menuIcon.value!.style.display = "block";
+    }, 300);
   }
 });
-
-// CONTROLE DA LARGURA DA TELA PARA MOSTRAR O INPUT NO MENU
-
-function handleResize() {
-  var screenWidth =
-    window.innerWidth ||
-    document.documentElement.clientWidth ||
-    document.body.clientWidth;
-
-  if (screenWidth <= 440) {
-    showInput.value = true;
-  } else {
-    showInput.value = false;
-  }
-}
-
-if (typeof window !== "undefined") {
-  window.addEventListener("resize", handleResize);
-
-  // Lembre-se de usar .value aqui para acessar as propriedades reativas
-  watch(showMenu, () => {
-    handleResize();
-  });
-
-  onMounted(() => {
-    // Configurar inicialmente o valor de handleResize()
-    handleResize();
-  });
-}
 </script>

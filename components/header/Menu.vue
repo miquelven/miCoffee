@@ -18,7 +18,7 @@
       <Icon name="uil:align-justify" color="white" size="24" />
     </span>
     <span id="closeIcon" ref="closeIcon" @click="() => (showMenu = false)">
-      <Icon name="uil:times" color="red" size="32" />
+      <Icon name="uil:times" color="white" size="32" />
     </span>
     <ul class="menu">
       <span>Menu</span>
@@ -38,21 +38,21 @@ import { onMounted, watch, ref } from "vue";
 
 const props = defineProps(["mobile", "routes"]);
 
-const showMenu = ref(false);
-const menuBar = ref(null);
-const menuIcon = ref(null);
-const closeIcon = ref(null);
-const showInput = ref(false);
+const showMenu = ref<boolean>(false);
+const menuBar = ref<HTMLElement | null>(null);
+const menuIcon = ref<HTMLElement | null>(null);
+const closeIcon = ref<HTMLElement | null>(null);
+const showInput = ref<boolean>(false);
 
 watch(showMenu, () => {
   if (showMenu.value == true) {
-    menuBar.value.style = "right: 0px;";
-    menuIcon.value.style = "opacity: 0";
-    closeIcon.value.style = "display: block";
+    menuBar.value!.style.right = "0px;";
+    menuIcon.value!.style.opacity = "0";
+    closeIcon.value!.style.display = "block";
   } else {
-    menuBar.value.style = "right: -170px";
-    closeIcon.value.style = "display: none";
-    setTimeout(() => (menuIcon.value.style = "opacity: 1"), 300);
+    menuBar.value!.style.right = "-170px";
+    closeIcon.value!.style.display = "none";
+    setTimeout(() => (menuIcon.value!.style.opacity = "1"), 300);
   }
 });
 
@@ -85,5 +85,3 @@ if (typeof window !== "undefined") {
   });
 }
 </script>
-
-<style lang="scss" scoped></style>

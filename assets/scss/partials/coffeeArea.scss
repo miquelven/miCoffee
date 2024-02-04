@@ -6,7 +6,6 @@
   margin-bottom: 20px;
   box-shadow: 4px 8px 15px #000;
   width: 90%;
-  // max-width: 90%;
   #inputSearchArea {
     display: flex;
     flex-direction: column;
@@ -71,8 +70,8 @@
 
     #iconCoffee {
       position: absolute;
-      right: 0;
-      bottom: 0;
+      right: -10px;
+      bottom: -20px;
       width: 7%;
       filter: contrast(0);
     }

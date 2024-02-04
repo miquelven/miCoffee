@@ -243,11 +243,16 @@ footer {
   }
 }
 #hero #rightSide img {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
-  border-radius: 50%;
-  box-shadow: 4px 6px 10px #000;
+  filter: brightness(1.5) contrast(2) saturate(1);
+  box-shadow: 15px 25px 10px #333;
   background: linear-gradient(to bottom, #423442 20%, #332933 40%);
+  transition: all ease-in 300ms;
+}
+#hero #rightSide img:hover {
+  filter: brightness(2) contrast(2) saturate(1.5);
+  box-shadow: 15px 25px 25px #000;
 }
 @media screen and (max-width: 640px) {
   #hero #rightSide {
@@ -268,8 +273,7 @@ footer {
   margin: 0 auto;
   margin-bottom: 20px;
   box-shadow: 4px 8px 15px #000;
-  max-width: 90%;
-  min-width: 500px;
+  width: 90%;
 }
 #coffeeArea #inputSearchArea {
   display: flex;
@@ -336,8 +340,76 @@ footer {
   filter: contrast(0);
 }
 @media screen and (max-width: 950px) {
-  #coffeeArea #coffeedescription {
+  #coffeeArea #inputSearchArea {
+    margin: 0 auto;
+  }
+  #coffeeArea #coffeeDescription {
     flex-direction: column;
-    background-color: #f00;
+  }
+  #coffeeArea #imgDescription img {
+    width: 60% !important;
+  }
+  #coffeeArea #iconCoffee {
+    bottom: -30px !important;
+    right: -30px !important;
+  }
+  #coffeeArea #infosDescription {
+    gap: 20px !important;
+  }
+}
+@media screen and (max-width: 660px) {
+  #coffeeArea #infosDescription h3 {
+    font-size: 1.1rem !important;
+    text-align: center;
+  }
+  #coffeeArea #infosDescription p {
+    font-size: 0.9rem !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  #coffeeArea #titleInput {
+    font-size: 1.2rem !important;
+  }
+  #coffeeArea #inputSearch {
+    font-size: 1rem !important;
+  }
+  #coffeeArea #infosDescription h3 {
+    font-size: 1rem !important;
+  }
+  #coffeeArea #infosDescription p {
+    margin-top: 20px;
+    font-size: 0.8rem !important;
+  }
+  #coffeeArea #iconCoffee {
+    width: 40% !important;
+    opacity: 40%;
+  }
+}
+@media screen and (max-width: 320px) {
+  #coffeeArea #titleInput {
+    font-size: 0.8rem !important;
+  }
+  #coffeeArea #inputSearch {
+    font-size: 0.8rem !important;
+  }
+  #coffeeArea #infosDescription p {
+    font-size: 0.7rem !important;
+  }
+  #coffeeArea #imgDescription img {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #inputSearchArea div {
+    width: 100% !important;
+  }
+  #coffeeArea {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 320px) {
+  #coffeeArea {
+    padding: 20px 14px !important;
   }
 }/*# sourceMappingURL=main.css.map */

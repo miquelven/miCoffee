@@ -2,14 +2,14 @@
   <section id="hero" data-aos="zoom-in" data-aos-easing="ease-in">
     <div id="leftSide">
       <h1 data-aos="fade-right">
-        <span class="purple-text-primary">Desvendando</span> o Mundo do Café Uma
-        Xícara de <span class="purple-text-primary">Histórias</span> e
+        <span class="purple-text-primary">Desvendando</span> o Mundo das bebidas
+        Um copo de <span class="purple-text-primary">Histórias</span> e
         <span class="purple-text">Aromas</span>
       </h1>
       <p data-aos="fade-right" data-aos-delay="300">
         Este é o lugar onde você encontra várias
         <span class="purple-text-secondary">informações</span> sobre todos os
-        <span class="purple-text-secondary">tipos de café</span>
+        <span class="purple-text-secondary">tipos de bebidas</span>
       </p>
       <p data-aos="fade-right" data-aos-delay="300">
         <span class="purple-text-secondary">Explore</span> e
@@ -20,10 +20,11 @@
     <div id="rightSide" data-aos="zoom-in" data-aos-delay="700">
       <div>
         <img
-          src="../assets/images/mainImg.png"
+          src="../assets/images/drinkHero.png"
           ref="target"
           @mousemove="hoverEffects"
-          alt="Imagem de uma xícara de café"
+          @mouseout="resetHoverEffects"
+          alt="Imagem de uma bebida"
           :style="{
             transition: 'all ease 300ms',
             transform: cardTransform,
@@ -45,7 +46,7 @@
         for="inputSearch  "
         data-aos="zoom-in"
         data-aos-delay="400"
-        >Pesquise pelo nome do café que quer obter informações
+        >Pesquise pelo nome da bebida que quer obter informações
       </label>
       <div data-aos="fade-up" data-aos-delay="400">
         <input type="text" id="inputSearch" />
@@ -55,32 +56,33 @@
     <div id="coffeeDescription">
       <div id="imgDescription" data-aos="zoom-in" data-aos-delay="700">
         <div>
-          <img src="../assets/images/secondaryImg.png" alt="Imagem de café" />
+          <img
+            id="drinks"
+            src="../assets/images/drinks.png"
+            alt="Imagem de bebidas"
+          />
         </div>
       </div>
       <div id="infosDescription" data-aos="zoom-in" data-aos-delay="700">
-        <h3>
-          Desfrute do prazer inigualável de uma xícara de café a qualquer
-          momento
-        </h3>
+        <h3>Desfrute do prazer inigualável de uma bebida a qualquer momento</h3>
         <p>
           Entretanto, a verdadeira satisfação vem quando apreciamos algo e
           compreendemos profundamente sobre o que estamos degustando.
         </p>
         <p>
           Em nosso espaço, oferecemos uma rica fonte de informações sobre uma
-          ampla variedade de cafés. Explore e descubra novos sabores através dos
-          filtros inteligentes disponíveis em nosso site.
+          ampla variedade de bebidas. Explore e descubra novos sabores através
+          dos filtros inteligentes disponíveis em nosso site.
         </p>
         <p>
           Aproveite a oportunidade de filtrar dados e mergulhar no fascinante
-          universo de tipos de café, muitos dos quais você nem imaginava que
+          universo de tipos de bebidas, muitos dos quais você nem imaginava que
           existiam.
         </p>
         <img
           id="iconCoffee"
-          src="../assets/images/coffeIcon.png"
-          alt="Icone de uma xícara de café"
+          src="../assets/images/drinkIcon.png"
+          alt="Icone de uma bebida"
         />
       </div>
     </div>
@@ -106,7 +108,7 @@ const { isOutside, elementHeight, elementWidth } = useMouseInElement(
 );
 
 const cardTransform = computed(() => {
-  const MAX_ROTATION = 35;
+  const MAX_ROTATION = 50;
   rX.value = (
     MAX_ROTATION / 2 -
     (elementYValue.value / elementHeightValue.value) * MAX_ROTATION
@@ -117,7 +119,7 @@ const cardTransform = computed(() => {
     (elementXValue.value / elementWidthValue.value) * MAX_ROTATION
   ).toFixed(2);
 
-  return `perspective(${elementWidthValue.value}px) rotateX(${rX.value}deg) rotateY(${rY.value}deg)`;
+  return `perspective(${elementWidthValue.value}px) rotateX(${rX.value}deg) rotateY(${rY.value}deg) scale(1.05)`;
 });
 
 const hoverEffects = (event) => {
@@ -127,5 +129,9 @@ const hoverEffects = (event) => {
   elementHeightValue.value = elementHeight.value;
   elementWidthValue.value = elementWidth.value;
   isOutSideValue.value = isOutside.value;
+};
+
+const resetHoverEffects = () => {
+  target.value.style = "perspective(0px) rotateX(0deg) rotateY(0deg) scale(1);";
 };
 </script>

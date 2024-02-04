@@ -2,6 +2,8 @@
   display: flex;
   align-items: center;
   position: relative;
+  min-height: calc(100vh - 100px);
+  margin-bottom: 40px;
 
   #leftSide,
   #rightSide {

@@ -1,0 +1,63 @@
+#coffeeArea {
+  background: $dark-secondary;
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 20px;
+  box-shadow: 4px 8px 15px #000;
+  #inputSearchArea {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    #titleInput {
+      font-size: 1.5rem;
+      text-align: center;
+      font-weight: bold;
+    }
+    #inputSearch {
+      width: 70%;
+      margin: 35px auto;
+      border-radius: 10px;
+      background-color: $dark-primary;
+      outline: none;
+      font-size: 1.2rem;
+      padding: 5px 10px;
+      box-shadow: 0px 0px 10px #0000009f;
+      transition: box-shadow ease-in 300ms;
+    }
+    #inputSearch:hover {
+      box-shadow: 1px 5px 15px #000;
+    }
+  }
+  #coffeeDescription {
+    display: flex;
+    align-items: center;
+
+    #imgDescription,
+    #infosDescription {
+      flex: 1;
+    }
+
+    #imgDescription {
+      position: relative;
+      img {
+        width: 70%;
+        margin: 0 auto;
+      }
+    }
+
+    #infosDescription {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      font-size: 1.2rem;
+    }
+
+    #iconCoffee {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 7%;
+      filter: contrast(0);
+    }
+  }
+}

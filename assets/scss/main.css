@@ -23,9 +23,8 @@ body {
 
 header {
   width: 100%;
-  padding: 10px 0;
+  padding: 12px 0;
   background-color: #332933;
-  margin-bottom: 50px;
 }
 header .container {
   display: flex;
@@ -51,7 +50,7 @@ header #searchArea input {
   background-color: rgba(255, 255, 255, 0.1);
   border: 0;
   outline: none;
-  padding: 6px 8px;
+  padding: 4px 8px;
   font-size: 1rem;
   color: white;
   border-radius: 7px;
@@ -61,11 +60,6 @@ header #searchArea #searchIcon {
   position: absolute;
   right: 13px;
   top: 7px;
-}
-@media screen and (max-width: 440px) {
-  header #searchArea {
-    display: none;
-  }
 }
 header .menu {
   display: flex;
@@ -104,54 +98,65 @@ header .menu li a:hover::before {
   width: 50%;
   opacity: 1;
 }
-
-#menuBar {
+header #menuBar {
+  display: none;
   position: absolute;
   top: 0px;
   right: -170px;
   z-index: 99;
   transition: all ease-in 0.3s;
 }
-#menuBar .icon {
+header #menuBar .icon {
   position: absolute;
   cursor: pointer;
 }
-#menuBar #menuIcon {
+header #menuBar #menuIcon {
   right: 210px;
-  top: 20px;
+  top: 14px;
 }
-#menuBar #closeIcon {
+header #menuBar #closeIcon {
   right: 5px;
   top: 10px;
 }
-#menuBar ul {
+header #menuBar ul {
   display: flex;
   flex-direction: column;
   padding-top: 20px;
   width: 170px;
   height: 100vh;
-  background: rgba(44, 44, 44, 0.6196078431);
+  background: #000;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
 }
-#menuBar ul li {
+header #menuBar ul li {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: ease 300ms;
 }
-#menuBar ul li a {
+header #menuBar ul li a {
   color: rgba(255, 255, 255, 0.7176470588);
 }
-#menuBar ul li a:hover {
+header #menuBar ul li a:hover {
   color: #fff;
   font-weight: 700;
 }
-#menuBar ul li a::before {
+header #menuBar ul li a::before {
   display: none;
 }
-#menuBar ul li:hover {
+header #menuBar ul li:hover {
   background-color: rgba(0, 0, 0, 0.3);
+}
+@media screen and (max-width: 590px) {
+  header #searchArea {
+    display: none;
+  }
+  header #menuDesktop {
+    display: none;
+  }
+  header #menuBar {
+    display: flex;
+  }
 }
 
 footer {
@@ -163,6 +168,8 @@ footer {
   display: flex;
   align-items: center;
   position: relative;
+  min-height: calc(100vh - 100px);
+  margin-bottom: 40px;
 }
 #hero #leftSide,
 #hero #rightSide {
@@ -215,7 +222,7 @@ footer {
 @media screen and (max-width: 640px) {
   #hero #leftSide {
     position: relative;
-    z-index: 99;
+    z-index: 2;
   }
   #hero #leftSide h1,
   #hero #leftSide p {
@@ -223,15 +230,14 @@ footer {
   }
 }
 @media screen and (max-width: 420px) {
-  #hero h1 {
+  #hero #leftSide h1 {
     font-size: 1.3rem;
     text-align: center;
   }
-  #hero .purple-text-primary {
-    font-size: 10px;
-    color: #f00;
+  #hero #leftSide .purple-text-primary {
+    font-size: 1.8rem;
   }
-  #hero p {
+  #hero #leftSide p {
     text-align: center;
     font-size: 0.8rem;
   }
@@ -253,4 +259,34 @@ footer {
   #hero #rightSide img {
     opacity: 15%;
   }
+}
+
+#coffeeArea {
+  background: #332933;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 4px 8px 15px #000;
+}
+#coffeeArea #inputSearchArea {
+  display: flex;
+  flex-direction: column;
+}
+#coffeeArea #inputSearchArea #titleInput {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+#coffeeArea #inputSearchArea #inputSearch {
+  width: 70%;
+  margin: 30px auto;
+  border-radius: 10px;
+  background-color: #423442;
+  outline: none;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6235294118);
+  transition: box-shadow ease-in 300ms;
+}
+#coffeeArea #inputSearchArea #inputSearch:hover {
+  box-shadow: 1px 5px 15px #000;
 }/*# sourceMappingURL=main.css.map */

@@ -32,6 +32,53 @@
       </div>
     </div>
   </section>
+
+  <section
+    id="coffeeArea"
+    data-aos="zoom-in"
+    data-aos-easing="linear"
+    data-aos-duration="500"
+  >
+    <div id="inputSearchArea">
+      <label id="titleInput" for="inputSearch "
+        >Pesquise pelo nome do café que quer obter informações
+      </label>
+      <input type="text" id="inputSearch" />
+    </div>
+
+    <div id="coffeeDescription">
+      <div id="imgDescription">
+        <div>
+          <img src="../assets/images/secondaryImg.png" alt="Imagem de café" />
+        </div>
+      </div>
+      <div id="infosDescription">
+        <h3>
+          Desfrute do prazer inigualável de uma xícara de café a qualquer
+          momento
+        </h3>
+        <p>
+          Entretanto, a verdadeira satisfação vem quando apreciamos algo e
+          compreendemos profundamente sobre o que estamos degustando.
+        </p>
+        <p>
+          Em nosso espaço, oferecemos uma rica fonte de informações sobre uma
+          ampla variedade de cafés. Explore e descubra novos sabores através dos
+          filtros inteligentes disponíveis em nosso site.
+        </p>
+        <p>
+          Aproveite a oportunidade de filtrar dados e mergulhar no fascinante
+          universo de tipos de café, muitos dos quais você nem imaginava que
+          existiam.
+        </p>
+        <img
+          id="iconCoffee"
+          src="../assets/images/coffeIcon.png"
+          alt="Icone de uma xícara de café"
+        />
+      </div>
+    </div>
+  </section>
 </template>
 
 <script setup>

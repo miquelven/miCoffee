@@ -11,8 +11,5 @@ export default defineNuxtConfig({
       },
     },
   },
-  modules: ["nuxt-icon", "@nuxt/ui", "@vueuse/nuxt"],
-  app: {
-    pageTransition: { name: "page", mode: "out-in" },
-  },
+  modules: ["nuxt-icon", "@nuxt/ui", "@vueuse/nuxt", "nuxt-aos"],
 });

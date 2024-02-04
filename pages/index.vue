@@ -1,23 +1,23 @@
 <template>
-  <section id="hero">
+  <section id="hero" data-aos="zoom-in" data-aos-easing="ease-in">
     <div id="leftSide">
-      <h1>
+      <h1 data-aos="fade-right">
         <span class="purple-text-primary">Desvendando</span> o Mundo do Café Uma
         Xícara de <span class="purple-text-primary">Histórias</span> e
         <span class="purple-text">Aromas</span>
       </h1>
-      <p>
+      <p data-aos="fade-right" data-aos-delay="300">
         Este é o lugar onde você encontra várias
         <span class="purple-text-secondary">informações</span> sobre todos os
         <span class="purple-text-secondary">tipos de café</span>
       </p>
-      <p>
+      <p data-aos="fade-right" data-aos-delay="300">
         <span class="purple-text-secondary">Explore</span> e
         <span class="purple-text-secondary">conheça mais</span> sobre cada um
         deles
       </p>
     </div>
-    <div id="rightSide">
+    <div id="rightSide" data-aos="zoom-in" data-aos-delay="700">
       <div>
         <img
           src="../assets/images/mainImg.png"

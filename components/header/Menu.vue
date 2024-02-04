@@ -22,7 +22,6 @@
     </span>
     <ul class="menu">
       <span>Menu</span>
-      <input type="text" id="input" />
 
       <li v-for="(route, index) in props.routes" :key="index">
         <NuxtLink :to="route.path">

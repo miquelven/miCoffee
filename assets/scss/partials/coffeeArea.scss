@@ -2,8 +2,11 @@
   background: $dark-secondary;
   border-radius: 20px;
   padding: 40px;
+  margin: 0 auto;
   margin-bottom: 20px;
   box-shadow: 4px 8px 15px #000;
+  width: 90%;
+  // max-width: 90%;
   #inputSearchArea {
     display: flex;
     flex-direction: column;
@@ -13,21 +16,26 @@
       text-align: center;
       font-weight: bold;
     }
-    #inputSearch {
+    div {
       width: 70%;
-      margin: 35px auto;
-      border-radius: 10px;
-      background-color: $dark-primary;
-      outline: none;
-      font-size: 1.2rem;
-      padding: 5px 10px;
-      box-shadow: 0px 0px 10px #0000009f;
-      transition: box-shadow ease-in 300ms;
-    }
-    #inputSearch:hover {
-      box-shadow: 1px 5px 15px #000;
+      margin: 0 auto;
+      #inputSearch {
+        margin: 35px auto;
+        width: 100%;
+        border-radius: 10px;
+        background-color: $dark-primary;
+        outline: none;
+        font-size: 1.2rem;
+        padding: 5px 10px;
+        box-shadow: 0px 0px 10px #0000009f;
+        transition: box-shadow ease-in 300ms;
+      }
+      #inputSearch:hover {
+        box-shadow: 1px 5px 15px #000;
+      }
     }
   }
+
   #coffeeDescription {
     display: flex;
     align-items: center;
@@ -49,7 +57,16 @@
       display: flex;
       flex-direction: column;
       gap: 40px;
-      font-size: 1.2rem;
+      h3 {
+        font-size: 1.4rem;
+        font-weight: bold;
+        position: relative;
+      }
+
+      p {
+        font-size: 1.1rem;
+        color: #ffffffc3;
+      }
     }
 
     #iconCoffee {
@@ -59,5 +76,98 @@
       width: 7%;
       filter: contrast(0);
     }
+  }
+
+  @media screen and (max-width: 950px) {
+    #inputSearchArea {
+      margin: 0 auto;
+    }
+    #coffeeDescription {
+      flex-direction: column;
+    }
+    #imgDescription {
+      img {
+        width: 60% !important;
+      }
+    }
+    #iconCoffee {
+      bottom: -30px !important;
+      right: -30px !important;
+    }
+    #infosDescription {
+      gap: 20px !important;
+    }
+  }
+
+  @media screen and (max-width: 660px) {
+    #infosDescription {
+      h3 {
+        font-size: 1.1rem !important;
+        text-align: center;
+      }
+
+      p {
+        font-size: 0.9rem !important;
+      }
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    #titleInput {
+      font-size: 1.2rem !important;
+    }
+    #inputSearch {
+      font-size: 1rem !important;
+    }
+    #infosDescription {
+      h3 {
+        font-size: 1rem !important;
+      }
+
+      p {
+        margin-top: 20px;
+        font-size: 0.8rem !important;
+      }
+    }
+    #iconCoffee {
+      width: 40% !important;
+      opacity: 40%;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    #titleInput {
+      font-size: 0.8rem !important;
+    }
+    #inputSearch {
+      font-size: 0.8rem !important;
+    }
+    #infosDescription {
+      p {
+        font-size: 0.7rem !important;
+      }
+    }
+    #imgDescription {
+      img {
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #inputSearchArea {
+    div {
+      width: 100% !important;
+    }
+  }
+  #coffeeArea {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #coffeeArea {
+    padding: 20px 14px !important;
   }
 }

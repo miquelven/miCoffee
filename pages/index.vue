@@ -40,19 +40,25 @@
     data-aos-duration="500"
   >
     <div id="inputSearchArea">
-      <label id="titleInput" for="inputSearch "
+      <label
+        id="titleInput"
+        for="inputSearch  "
+        data-aos="zoom-in"
+        data-aos-delay="400"
         >Pesquise pelo nome do café que quer obter informações
       </label>
-      <input type="text" id="inputSearch" />
+      <div data-aos="fade-up" data-aos-delay="400">
+        <input type="text" id="inputSearch" />
+      </div>
     </div>
 
     <div id="coffeeDescription">
-      <div id="imgDescription">
+      <div id="imgDescription" data-aos="zoom-in" data-aos-delay="700">
         <div>
           <img src="../assets/images/secondaryImg.png" alt="Imagem de café" />
         </div>
       </div>
-      <div id="infosDescription">
+      <div id="infosDescription" data-aos="zoom-in" data-aos-delay="700">
         <h3>
           Desfrute do prazer inigualável de uma xícara de café a qualquer
           momento

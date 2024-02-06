@@ -2,7 +2,7 @@
   <template v-if="isPending == true">
     <li class="drinkCard" data-aos="fade-up">
       <div class="pendingMode">
-        <p>Carregando...</p>
+        <p>Loading...</p>
       </div>
       <p>--------</p>
       <span>-----</span>

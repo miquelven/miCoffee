@@ -2,19 +2,20 @@
   <section id="hero" data-aos="zoom-in" data-aos-easing="ease-in">
     <div id="leftSide">
       <h1 data-aos="fade-right">
-        <span class="purple-text-primary">Desvendando</span> o Mundo das bebidas
-        Um copo de <span class="purple-text-primary">Histórias</span> e
+        <span class="purple-text-primary">Unveiling</span> the World of
+        Beverages: A Glass of
+        <span class="purple-text-primary">Stories</span> and
         <span class="purple-text">Aromas</span>
       </h1>
       <p data-aos="fade-right" data-aos-delay="300">
-        Este é o lugar onde você encontra várias
-        <span class="purple-text-secondary">informações</span> sobre todos os
-        <span class="purple-text-secondary">tipos de bebidas</span>
+        This is the place where you find many
+        <span class="purple-text-secondary"> information</span> about all
+        <span class="purple-text-secondary">type of beverages</span>
       </p>
       <p data-aos="fade-right" data-aos-delay="300">
         <span class="purple-text-secondary">Explore</span> e
-        <span class="purple-text-secondary">conheça mais</span> sobre cada um
-        deles
+        <span class="purple-text-secondary">and get to know more</span> about
+        each one of them
       </p>
     </div>
     <div id="rightSide" data-aos="zoom-in" data-aos-delay="700">
@@ -46,7 +47,7 @@
         for="inputSearch  "
         data-aos="zoom-in"
         data-aos-delay="400"
-        >Pesquise pelo nome da bebida que quer obter informações
+        >Search by the name of the beverage you want to obtain information about
       </label>
       <div data-aos="fade-up" data-aos-delay="400">
         <input type="text" id="inputSearch" />
@@ -64,20 +65,20 @@
         </div>
       </div>
       <div id="infosDescription" data-aos="zoom-in" data-aos-delay="700">
-        <h3>Desfrute do prazer inigualável de uma bebida a qualquer momento</h3>
+        <h3>Enjoy the unparalleled pleasure of a beverage at any time</h3>
         <p>
-          Entretanto, a verdadeira satisfação vem quando apreciamos algo e
-          compreendemos profundamente sobre o que estamos degustando.
+          However, true satisfaction comes when we appreciate something and
+          deeply understand what we are tasting.
         </p>
         <p>
-          Em nosso espaço, oferecemos uma rica fonte de informações sobre uma
-          ampla variedade de bebidas. Explore e descubra novos sabores através
-          dos filtros inteligentes disponíveis em nosso site.
+          In our space, we offer a rich source of information about a wide
+          variety of beverages. Explore and discover new flavors through the
+          smart filters available on our website
         </p>
         <p>
-          Aproveite a oportunidade de filtrar dados e mergulhar no fascinante
-          universo de tipos de bebidas, muitos dos quais você nem imaginava que
-          existiam.
+          Take advantage of the opportunity to filter data and dive into the
+          fascinating universe of beverage types, many of which you never even
+          imagined existed.
         </p>
         <img
           id="iconCoffee"
@@ -89,7 +90,7 @@
   </section>
 
   <section id="drinksExamples">
-    <h3 data-aos="zoom-in">Exemplos de bebidas</h3>
+    <h3 data-aos="zoom-in">Examples of beverages</h3>
 
     <div>
       <button @click="reset" data-aos="zoom-in" id="resetButton">

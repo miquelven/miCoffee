@@ -11,5 +11,5 @@ export default defineNuxtConfig({
       },
     },
   },
-  modules: ["nuxt-icon", "@nuxt/ui", "@vueuse/nuxt", "nuxt-aos"],
+  modules: ["nuxt-icon", "@nuxt/ui", "@vueuse/nuxt", "nuxt-aos", "@pinia/nuxt"],
 });

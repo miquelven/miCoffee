@@ -87,6 +87,37 @@
       </div>
     </div>
   </section>
+
+  <section id="drinksExamples">
+    <h3 data-aos="zoom-in">Exemplos de bebidas</h3>
+
+    <div>
+      <button @click="reset" data-aos="zoom-in" id="resetButton">
+        <Icon name="uil:refresh" color="white" id="searchIcon" size="28" />
+      </button>
+      <ul>
+        <template v-if="isPending.value == true">
+          <Card :isPending="true" :drinkInfo="[]" />
+          <Card :isPending="true" :drinkInfo="[]" />
+          <Card :isPending="true" :drinkInfo="[]" />
+        </template>
+        <template v-else>
+          <li
+            v-for="(drinks, index) in drinkCard1.value"
+            :key="index"
+            class="drinkCard"
+          >
+            <Card
+              v-for="(drink, index) in drinks"
+              :key="index"
+              :drinkInfo="drink"
+              :isPending="false"
+            />
+          </li>
+        </template>
+      </ul>
+    </div>
+  </section>
 </template>
 
 <script setup>
@@ -102,6 +133,10 @@ const elementWidthValue = ref(0);
 const isOutSideValue = ref(false); // Defina o valor padrão como false
 const rX = ref(0); // Defina valores padrão para 0 ou valores iniciais apropriados
 const rY = ref(0);
+
+const drinkCard1 = ref([]);
+const drinkCard2 = ref([]);
+const drinkCard3 = ref([]);
 
 const { isOutside, elementHeight, elementWidth } = useMouseInElement(
   target.value
@@ -133,5 +168,67 @@ const hoverEffects = (event) => {
 
 const resetHoverEffects = () => {
   target.value.style = "perspective(0px) rotateX(0deg) rotateY(0deg) scale(1);";
+};
+
+const isPending = ref(false);
+
+const fetchGetDrinks = async (query) => {
+  let drinksArray = [];
+  try {
+    const { data, pending } = await useAsyncData(
+      "drink-random",
+      async () => {
+        const [drink1, drink2, drink3] = await Promise.all([
+          $fetch(`https://www.thecocktaildb.com/api/json/v1/1/${query}`),
+          $fetch(`https://www.thecocktaildb.com/api/json/v1/1/${query}`),
+          $fetch(`https://www.thecocktaildb.com/api/json/v1/1/${query}`),
+        ]);
+        drinksArray.push(drink1, drink2, drink3);
+        return drinksArray;
+      },
+      {
+        server: false,
+        lazy: true,
+        transform: (data) => {
+          let values = [];
+          for (let i = 0; i < drinksArray.length; i++) {
+            values.push(
+              data[i].drinks.map((d) => {
+                let ingredientsValue = [];
+                let i = 1;
+                do {
+                  ingredientsValue.push(d[`strIngredient${i}`]);
+                  i++;
+                } while (d[`strIngredient${i}`] !== null);
+                return {
+                  title: d.strDrink,
+                  img: d.strDrinkThumb,
+                  category: d.strCategory,
+                  alcoholic: d.strAlcoholic,
+                  ingredients: ingredientsValue,
+                  instructions: d.strInstructions,
+                };
+              })
+            );
+          }
+          return values;
+        },
+      }
+    );
+    drinkCard1.value = data;
+    isPending.value = pending;
+  } catch (e) {
+    console.log("Errorr:" + e);
+  }
+};
+
+onBeforeMount(() => {
+  fetchGetDrinks("random.php");
+});
+
+const reset = () => {
+  drinkCard1.value = [];
+
+  fetchGetDrinks("random.php");
 };
 </script>

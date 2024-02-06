@@ -271,7 +271,7 @@ footer {
   border-radius: 20px;
   padding: 40px;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   box-shadow: 4px 8px 15px #000;
   width: 90%;
 }
@@ -334,8 +334,8 @@ footer {
 }
 #coffeeArea #coffeeDescription #iconCoffee {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: -10px;
+  bottom: -20px;
   width: 7%;
   filter: contrast(0);
 }
@@ -412,4 +412,15 @@ footer {
   #coffeeArea {
     padding: 20px 14px !important;
   }
+}
+#drinksExamples {
+  padding: 50px 10px;
+}
+#drinksExamples h3 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #db2ad5;
+}
+#drinksExamples div ul {
+  display: flex;
 }/*# sourceMappingURL=main.css.map */

@@ -93,7 +93,7 @@
     <h3 data-aos="zoom-in">Examples of beverages</h3>
 
     <div>
-      <button @click="reset" data-aos="zoom-in" id="resetButton">
+      <button @click="resetDrinkCardInfo" data-aos="zoom-in" id="resetButton">
         <Icon name="uil:refresh" color="white" id="searchIcon" size="28" />
       </button>
       <ul>
@@ -104,7 +104,7 @@
         </template>
         <template v-else>
           <li
-            v-for="(drinks, index) in drinkCard1.value"
+            v-for="(drinks, index) in drinkCardInfos.value"
             :key="index"
             class="drinkCard"
           >
@@ -127,17 +127,15 @@ definePageMeta({
 });
 
 const target = ref();
-const elementXValue = ref(0); // Defina valores padrão para 0 ou valores iniciais apropriados
+const elementXValue = ref(0);
 const elementYValue = ref(0);
 const elementHeightValue = ref(0);
 const elementWidthValue = ref(0);
-const isOutSideValue = ref(false); // Defina o valor padrão como false
-const rX = ref(0); // Defina valores padrão para 0 ou valores iniciais apropriados
+const isOutSideValue = ref(false);
+const rX = ref(0);
 const rY = ref(0);
 
-const drinkCard1 = ref([]);
-const drinkCard2 = ref([]);
-const drinkCard3 = ref([]);
+const drinkCardInfos = ref([]);
 
 const { isOutside, elementHeight, elementWidth } = useMouseInElement(
   target.value
@@ -173,7 +171,7 @@ const resetHoverEffects = () => {
 
 const isPending = ref(false);
 
-const fetchGetDrinks = async (query) => {
+const getRandomDrinks = async (query) => {
   let drinksArray = [];
   try {
     const { data, pending } = await useAsyncData(
@@ -216,20 +214,20 @@ const fetchGetDrinks = async (query) => {
         },
       }
     );
-    drinkCard1.value = data;
+    drinkCardInfos.value = data;
     isPending.value = pending;
   } catch (e) {
-    console.log("Errorr:" + e);
+    // colocar o toast
   }
 };
 
 onBeforeMount(() => {
-  fetchGetDrinks("random.php");
+  getRandomDrinks("random.php");
 });
 
-const reset = () => {
-  drinkCard1.value = [];
+const resetDrinkCardInfo = () => {
+  drinkCardInfos.value = [];
 
-  fetchGetDrinks("random.php");
+  getRandomDrinks("random.php");
 };
 </script>

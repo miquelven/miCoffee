@@ -528,6 +528,21 @@ footer {
   gap: 10px 15px;
   flex-wrap: wrap;
 }
+#drinksExamples div ul li .infosDrink button {
+  width: 50%;
+  margin: 30px auto;
+  background: #754574;
+  border-radius: 5px;
+  padding: 5px 0px;
+  box-shadow: 4px 7px 10px rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  font-weight: bold;
+  transition: all ease 1s;
+}
+#drinksExamples div ul li .infosDrink button:hover {
+  opacity: 0.75;
+  filter: brightness(0.8);
+}
 #drinksExamples div ul li span {
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.6745098039);

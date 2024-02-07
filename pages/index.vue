@@ -200,6 +200,7 @@ const getRandomDrinks = async (query) => {
                   i++;
                 } while (d[`strIngredient${i}`] !== null);
                 return {
+                  id: d.idDrink,
                   title: d.strDrink,
                   img: d.strDrinkThumb,
                   category: d.strCategory,

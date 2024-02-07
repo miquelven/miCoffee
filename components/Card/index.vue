@@ -24,6 +24,7 @@
             {{ ingredient }}
           </li>
         </ul>
+        <button @click="redirectShowMore(drinkInfo.id)">Show More</button>
       </div>
     </div>
     <p>{{ drinkInfo.title }}</p>
@@ -33,4 +34,10 @@
 
 <script setup lang="ts">
 defineProps(["drinkInfo", "isPending"]);
+
+const router = useRouter();
+
+const redirectShowMore = (id) => {
+  router.push(`drinksInfo/${id}`);
+};
 </script>

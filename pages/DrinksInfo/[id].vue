@@ -1,5 +1,35 @@
 <template>
-  <template v-if="isPending == true"> Carregando... </template>
+  <template v-if="isPending == true">
+    <div id="drinkInfoArea">
+      <div class="cardInfo">
+        <div class="cardInfoImgArea">
+          <div class="cardInfoContent">
+            <h2>---------</h2>
+            <p>
+              <span>-------</span>
+              ---------
+            </p>
+            <p><span>---------</span> ---------</p>
+            <p><span>---------</span> ---------</p>
+          </div>
+        </div>
+
+        <div id="cardInfoIngredients">
+          <h2>--------------</h2>
+          <ul>
+            <li
+              v-for="(item, index) of 6"
+              :key="index"
+              class="modelIngredientItem"
+            >
+              <p>Loading...</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </template>
+
   <template v-else>
     <div v-if="drinkInfo" id="drinkInfoArea">
       <div
@@ -61,7 +91,6 @@ const getIngredients = async (d) => {
     ingredients.value = await useFetch(
       `https://www.thecocktaildb.com/images/ingredients/${d.value[0].ingredients[i]}.png`
     );
-    setTimeout(() => console.log(ingredients.value), 400);
   }
 };
 
@@ -81,12 +110,6 @@ const getDrink = async () => {
     console.log("error" + e);
   }
 };
-
-const urlImg = computed(() => {
-  console.log(
-    ingredients.value.data.type
-  )`https://www.thecocktaildb.com/images/ingredients/${ingredients}.png`;
-});
 
 onBeforeMount(() => {
   getDrink();

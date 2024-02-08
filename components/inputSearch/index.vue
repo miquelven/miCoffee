@@ -1,9 +1,13 @@
 <template>
-  <input @keyup="redirectDrinkView" :autofocus="autofocus" />
+  <input
+    @keyup="redirectDrinkView"
+    :placeholder="placeholder"
+    :autofocus="autofocus"
+  />
 </template>
 
 <script setup>
-defineProps(["autofocus"]);
+defineProps(["autofocus", "placeholder"]);
 
 const router = useRouter();
 

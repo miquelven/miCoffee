@@ -50,7 +50,11 @@
         >Search by the name of the beverage you want to obtain information about
       </label>
       <div data-aos="fade-up" data-aos-delay="400">
-        <InputSearch :autofocus="false" id="inputSearch" />
+        <InputSearch
+          :autofocus="false"
+          placeholder="Margarita"
+          id="inputSearch"
+        />
       </div>
     </div>
 

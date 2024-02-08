@@ -1,0 +1,170 @@
+#drinkInfoArea {
+  margin-top: 80px;
+  .cardInfo {
+    display: flex;
+
+    .cardInfoImgArea {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      img {
+        width: 40%;
+        object-fit: cover;
+        border-radius: 20px;
+        box-shadow: 4px 7px 15px rgba(0 0 0 / 0.5);
+        box-shadow: 6px 6px 0px $secondary;
+        transition: all ease 0.4s;
+      }
+
+      img:hover {
+        transform: scale(1.05) translate(10px, 10px);
+      }
+
+      h2 {
+        font-weight: bold;
+        font-size: 1.7rem;
+      }
+
+      p {
+        span {
+          color: #ffffff69;
+          display: block;
+        }
+      }
+
+      .cardInfoContent {
+        padding: 50px 0;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+
+    #cardInfoIngredients {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h2 {
+        margin-bottom: 50px;
+        font-size: 1.6rem;
+        font-weight: bold;
+      }
+
+      ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+
+        li {
+          width: 90%;
+          height: 235px;
+          margin: 0 auto;
+          background: #000;
+          border-radius: 30px;
+          padding: 20px 0;
+          text-align: center;
+          font-weight: bold;
+          font-size: 1.3rem;
+          position: relative;
+
+          box-shadow: 4px 8px 10px rgba(0 0 0 / 0.8);
+          //   box-shadow: 4px 8px 25px #ffffff31;
+          transition: all ease 0.3s;
+          div {
+            width: 30%;
+            margin: 20px auto;
+            filter: brightness(1.2);
+            transition: all ease 300ms;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+        li::before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          //   background: linear-gradient(
+          //     to bottom left,
+          //     $secondary,
+          //     #000 30%,
+          //     #000,
+          //     $secondary 95%
+          //   );
+          background: linear-gradient(to bottom left, $secondary 10%, #000);
+          position: absolute;
+          inset: 0;
+          border-radius: 30px;
+          opacity: 0.35;
+        }
+        li:hover {
+          box-shadow: 4px 8px 25px $secondary;
+
+          filter: brightness(1.05);
+          img {
+            scale: 0.85;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 920px) {
+  #drinkInfoArea {
+    .cardInfo {
+      flex-direction: column;
+      padding: 0 20px;
+      .cardInfoImgArea {
+        gap: 40px;
+        flex-direction: row-reverse;
+        img {
+          width: 130px;
+          height: 130px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #drinkInfoArea {
+    #cardInfoIngredients {
+      margin-top: 100px;
+      ul {
+        grid-template-columns: 1fr !important;
+
+        li {
+          width: 70%;
+          height: 175px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 440px) {
+  #drinkInfoArea {
+    .cardInfo {
+      #cardInfoIngredients {
+        margin-top: 50px;
+      }
+      .cardInfoImgArea {
+        flex-direction: column;
+        img {
+          width: 110px;
+          height: 110px;
+        }
+
+        .cardInfoContent {
+          padding: 20px 0;
+        }
+      }
+    }
+  }
+}

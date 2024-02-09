@@ -68,7 +68,9 @@ watch(showMenu, () => {
   }
 });
 
-const colorControl = computed(() => (isDark.value == true ? "white" : "black"));
+const colorControl = computed(() => {
+  return isDark.value == true ? "black" : "white";
+});
 
 const isDark = useDark({
   selector: "html",

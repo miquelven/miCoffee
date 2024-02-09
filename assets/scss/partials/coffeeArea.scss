@@ -1,10 +1,9 @@
 #coffeeArea {
-  background: $dark-secondary;
   border-radius: 20px;
   padding: 40px;
   margin: 0 auto;
   margin-bottom: 50px;
-  box-shadow: 4px 8px 15px #000;
+  box-shadow: 4px 8px 10px purple;
   width: 90%;
   #inputSearchArea {
     display: flex;
@@ -22,7 +21,7 @@
         margin: 35px auto;
         width: 100%;
         border-radius: 10px;
-        background-color: $dark-primary;
+        background-color: rgba(255 255 255 / 0.05);
         outline: none;
         font-size: 1.2rem;
         padding: 5px 10px;

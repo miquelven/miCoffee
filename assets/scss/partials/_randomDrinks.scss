@@ -58,7 +58,6 @@
           overflow: hidden;
           box-shadow: 0px 0px 25px #000;
           border-radius: 5%;
-          background-color: $dark-secondary;
           position: relative;
           transition: all ease 1300ms;
         }
@@ -120,7 +119,18 @@
           button {
             width: 50%;
             margin: 30px auto;
-            background: $tertiary;
+            background: linear-gradient(
+              to bottom right,
+              #000 30%,
+              $primary,
+              $primary 10%,
+              #000 20%,
+              $primary,
+              #000 30%,
+              $primary 10%,
+              #000 50%,
+              $secondary 50%
+            );
             border-radius: 5px;
             padding: 5px 0px;
             box-shadow: 4px 7px 10px rgba(0 0 0 / 0.5);

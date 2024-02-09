@@ -13,7 +13,7 @@
         width: 40%;
         object-fit: cover;
         border-radius: 20px;
-        box-shadow: 4px 7px 15px rgba(0 0 0 / 0.5);
+        box-shadow: 4px 7px 15px purple;
         box-shadow: 6px 6px 0px $secondary;
         transition: all ease 0.4s;
       }
@@ -72,8 +72,7 @@
           font-size: 1.3rem;
           position: relative;
 
-          box-shadow: 4px 8px 10px rgba(0 0 0 / 0.8);
-          //   box-shadow: 4px 8px 25px #ffffff31;
+          box-shadow: 4px 8px 10px $tertiary;
           transition: all ease 0.3s;
           div {
             width: 30%;
@@ -83,6 +82,7 @@
             img {
               width: 100%;
               height: 100%;
+              transition: all ease 300ms;
             }
           }
         }
@@ -93,14 +93,13 @@
           content: "";
           width: 100%;
           height: 100%;
-          //   background: linear-gradient(
-          //     to bottom left,
-          //     $secondary,
-          //     #000 30%,
-          //     #000,
-          //     $secondary 95%
-          //   );
-          background: linear-gradient(to bottom left, $secondary 10%, #000);
+          background: linear-gradient(
+            to bottom left,
+            $secondary,
+            #000 30%,
+            #000,
+            $secondary 95%
+          );
           position: absolute;
           inset: 0;
           border-radius: 30px;

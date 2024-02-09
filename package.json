@@ -10,7 +10,6 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxtjs/color-mode": "^3.3.2",
     "nuxt": "^3.10.0",
     "nuxt-aos": "^1.2.2",
     "nuxt-icon": "^0.6.8",

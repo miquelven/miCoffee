@@ -1,3 +1,69 @@
+html.light {
+  .drinksExamples {
+    h3 {
+      text-shadow: 1px 0px 5px $primary;
+    }
+    div {
+      #resetButton {
+        background: $primary;
+        border-radius: 50%;
+        box-shadow: 4px 7px 10px $primary;
+      }
+      #resetButton:hover {
+        opacity: 1;
+      }
+    }
+    ul {
+      li {
+        div {
+          box-shadow: 2px 2px 25px $primary;
+        }
+        div:hover {
+          box-shadow: 4px 4px 25px $secondary;
+        }
+      }
+    }
+    .infosDrink {
+      h4,
+      h6 {
+        color: $secondary;
+      }
+      p,
+      li {
+        color: #000;
+      }
+
+      button {
+        background: linear-gradient(
+          to bottom right,
+          #fff 20%,
+          $secondary,
+          $secondary 20%,
+          #fff 20%,
+          $secondary,
+          #fff 30%,
+          $secondary 20%,
+          #fff 50%,
+          $secondary 80%
+        );
+        box-shadow: 4px 3px 10px $primary;
+      }
+
+      button:hover {
+        box-shadow: 4px 7px 10px $secondary;
+        opacity: 1;
+        filter: brightness(1);
+      }
+    }
+    span {
+      color: $dark-secondary;
+    }
+  }
+  .pendingMode {
+    color: $primary;
+  }
+}
+
 @keyframes showImg {
   from {
     opacity: 0;
@@ -198,6 +264,11 @@
   #resetButton {
     left: 0;
     top: 125px !important;
-    width: 30px;
+    width: 50px;
+    background: transparent !important;
+    box-shadow: none !important;
+    svg {
+      color: $primary !important;
+    }
   }
 }

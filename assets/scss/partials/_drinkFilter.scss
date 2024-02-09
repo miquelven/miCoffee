@@ -1,3 +1,33 @@
+html.light {
+  #drinkFilter {
+    box-shadow: 4px 8px 10px #000;
+
+    h2 {
+      text-shadow: 1px 1px 3px $secondary;
+    }
+
+    form {
+      label {
+        select {
+          background: transparent;
+        }
+        option:not(:checked) {
+          background: transparent;
+        }
+      }
+      button {
+        color: #000;
+        background: transparent;
+        box-shadow: 0px 0px 10px $primary;
+      }
+
+      button:hover {
+        box-shadow: 4px 4px 10px $secondary;
+      }
+    }
+  }
+}
+
 #drinkFilter {
   margin: 50px auto;
   padding: 10px;
@@ -37,17 +67,12 @@
         font-size: 0.95rem;
         padding: 3px 5px;
         box-shadow: 4px 2px 2px purple;
-
         option {
           outline: none;
         }
 
         option:not(:checked) {
           background: #000;
-        }
-
-        option:hover {
-          background: green;
         }
       }
     }
@@ -78,6 +103,7 @@
     button:hover {
       box-shadow: 1px 3px 10px $primary;
       filter: brightness(1.2);
+      transform: scale(1.05);
     }
   }
 }

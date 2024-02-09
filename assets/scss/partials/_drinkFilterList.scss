@@ -1,3 +1,33 @@
+html.light {
+  #drinkFiltered {
+    li {
+      .imgArea {
+        box-shadow: 4px 7px 10px $primary;
+
+        div {
+          h3 {
+            color: #fff;
+          }
+          button {
+            color: #fff;
+          }
+        }
+      }
+    }
+    li:hover {
+      .imgArea {
+        filter: brightness(1.4);
+        button {
+          filter: brightness(0.6);
+        }
+        button:hover {
+          filter: brightness(1.05);
+        }
+      }
+    }
+  }
+}
+
 #drinkFiltered {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -51,17 +81,12 @@
             #000 50%,
             $secondary 50%
           );
-
           opacity: 0;
           border-radius: 5px;
           font-weight: bold;
           margin: 15px 0;
           box-shadow: 4px 8px 10px #000;
           transition: all ease 700ms;
-        }
-
-        button:hover {
-          filter: brightness(0.9);
         }
       }
     }

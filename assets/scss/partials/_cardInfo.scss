@@ -1,3 +1,51 @@
+html.light {
+  #drinkInfoArea {
+    .cardInfo {
+      .cardInfoImgArea {
+        h2 {
+          color: $secondary;
+        }
+        p {
+          color: #000000e2;
+          span {
+            color: $primary;
+          }
+        }
+      }
+      #cardInfoIngredients {
+        h2 {
+          color: $secondary;
+        }
+        ul {
+          color: $primary;
+          li {
+            box-shadow: #000;
+          }
+          li:hover {
+            box-shadow: 4px 8px 25px $primary;
+          }
+          li::before {
+            background: linear-gradient(
+              to bottom right,
+              #fff 50%,
+              $secondary,
+              #fff,
+              $secondary 25%,
+              #fff 30%,
+              $secondary 75%,
+              #fff,
+              $secondary
+            );
+            opacity: 0.8;
+            position: absolute;
+            z-index: -1;
+          }
+        }
+      }
+    }
+  }
+}
+
 #drinkInfoArea {
   margin: 80px 0;
   padding: 0 20px;
@@ -13,7 +61,6 @@
         width: 40%;
         object-fit: cover;
         border-radius: 20px;
-        box-shadow: 4px 7px 15px purple;
         box-shadow: 6px 6px 0px $secondary;
         transition: all ease 0.4s;
       }
@@ -64,7 +111,6 @@
           width: 90%;
           height: 235px;
           margin: 0 auto;
-          background: #000;
           border-radius: 30px;
           padding: 20px 0;
           text-align: center;

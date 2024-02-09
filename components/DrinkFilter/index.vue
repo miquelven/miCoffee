@@ -6,6 +6,7 @@
       <select v-model="isAlcoholic" id="isAlcoholic">
         <option value=""></option>
         <option value="Alcoholic">Yes</option>
+
         <option value="Non_Alcoholic">No</option>
       </select>
     </label>

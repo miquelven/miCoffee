@@ -1,3 +1,33 @@
+html.light {
+  #leftSide {
+    text-shadow: none !important;
+    .purple-text-primary {
+      color: $secondary;
+      text-shadow: 2px 2px 4px #000 !important;
+    }
+    p {
+      color: #000 !important;
+      text-shadow: none !important;
+    }
+
+    .purple-text-secondary {
+      text-shadow: none !important;
+    }
+  }
+
+  #rightSide {
+    img {
+      filter: brightness(2) contrast(1) saturate(1.5) !important;
+      box-shadow: 10px 10px 7px #000 !important;
+    }
+
+    img:hover {
+      filter: brightness(1) contrast(1.5) saturate(2) !important;
+      box-shadow: 15px 25px 25px #000 !important;
+    }
+  }
+}
+
 #hero {
   display: flex;
   align-items: center;
@@ -92,11 +122,6 @@
       margin: 0 auto;
       filter: brightness(1.5) contrast(2) saturate(1);
       box-shadow: 4px 4px 10px purple;
-      background: linear-gradient(
-        to bottom,
-        $dark-primary 20%,
-        $dark-secondary 40%
-      );
       transition: all ease-in 300ms;
     }
     img:hover {

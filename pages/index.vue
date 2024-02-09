@@ -13,8 +13,8 @@
         <span class="purple-text-secondary">type of beverages</span>
       </p>
       <p data-aos="fade-right" data-aos-delay="300">
-        <span class="purple-text-secondary">Explore</span> e
-        <span class="purple-text-secondary">and get to know more</span> about
+        <span class="purple-text-secondary">Explore</span>
+        and <span class="purple-text-secondary"> get to know more</span> about
         each one of them
       </p>
     </div>

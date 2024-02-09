@@ -37,7 +37,7 @@ defineProps(["drinkInfo", "isPending"]);
 
 const router = useRouter();
 
-const redirectShowMore = (id) => {
+const redirectShowMore = (id: string) => {
   router.push(`drinksInfo/${id}`);
 };
 </script>

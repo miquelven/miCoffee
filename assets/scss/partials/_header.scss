@@ -13,6 +13,18 @@ html.light {
       }
     }
 
+    #menuIcon {
+      svg {
+        color: #000 !important;
+      }
+    }
+
+    #closeIcon {
+      svg {
+        color: #000 !important;
+      }
+    }
+
     #searchArea {
       input {
         color: #000;
@@ -127,6 +139,9 @@ header {
     #menuIcon {
       left: -30px;
       top: 14px;
+      svg {
+        color: #fff;
+      }
     }
     #closeIcon {
       right: 5px;

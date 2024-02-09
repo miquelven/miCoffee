@@ -23,10 +23,10 @@
       class="icon"
       @click="() => (showMenu = true)"
     >
-      <Icon name="uil:align-justify" :color="colorControl" size="24" />
+      <Icon name="uil:align-justify" color="white" size="24" />
     </span>
     <span id="closeIcon" ref="closeIcon" @click="() => (showMenu = false)">
-      <Icon name="uil:times" :color="colorControl" size="32" />
+      <Icon name="uil:times" color="white" size="32" />
     </span>
     <ul class="menu">
       <button id="colorTheme" @click="toggleDark()">
@@ -66,10 +66,6 @@ watch(showMenu, () => {
       menuIcon.value!.style.display = "block";
     }, 300);
   }
-});
-
-const colorControl = computed(() => {
-  return isDark.value == true ? "black" : "white";
 });
 
 const isDark = useDark({

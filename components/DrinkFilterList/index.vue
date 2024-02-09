@@ -77,8 +77,12 @@ const router = useRouter();
 const route = useRoute();
 
 const updateScroll = () => {
+  if (route.fullPath == "/#drinkFilter") {
+    router.push(`/`);
+  }
   console.log(route);
 };
+onMounted(() => updateScroll());
 
 const redirectShowMore = (id) => {
   router.push(`drinksInfo/${id}`);

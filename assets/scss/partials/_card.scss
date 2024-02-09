@@ -1,3 +1,31 @@
+html.light {
+  .containerCards {
+    .card {
+      box-shadow: 6px 6px 10px $tertiary;
+      .cardInfoImg {
+        box-shadow: 2px 4px 10px $tertiary;
+      }
+      .contentCardInfo {
+        button {
+          background-color: transparent;
+          box-shadow: 4px 4px 15px $primary !important;
+        }
+        button:hover {
+          box-shadow: 8px 8px 15px $primary !important;
+        }
+      }
+    }
+    .card:hover {
+      box-shadow: 6px 6px 10px $secondary;
+    }
+    .card:hover {
+      .cardInfoImg {
+        box-shadow: 5px 7px 10px $primary;
+      }
+    }
+  }
+}
+
 .containerCards {
   margin: 70px 0 50px 0;
   position: relative;

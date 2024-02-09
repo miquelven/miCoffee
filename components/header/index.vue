@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header data-aos="fade-down" data-aos-delay="500">
     <div class="container">
       <h1 @click="$router.push('/')"><span>Mi</span>Drinks</h1>
       <div id="searchArea">

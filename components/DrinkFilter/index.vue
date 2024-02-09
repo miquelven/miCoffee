@@ -1,6 +1,6 @@
 <template>
-  <h2>Filter List Drinks</h2>
-  <form @submit.prevent="filterDrinks">
+  <h2 data-aos="zoom-in" data-aos-delay="300">Filter List Drinks</h2>
+  <form @submit.prevent="filterDrinks" data-aos="fade-up" data-aos-delay="600">
     <label name="isAlcoholic">
       <span> Alcoholic </span>
       <select v-model="isAlcoholic" id="isAlcoholic">

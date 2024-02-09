@@ -127,7 +127,7 @@
     </div>
   </section>
 
-  <section id="drinkFilter">
+  <section id="drinkFilter" data-aos="zoom-in">
     <DrinkFilter @filter="filterDrinks" />
 
     <DrinkFilterList :drinks="drinksFiltered" />

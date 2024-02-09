@@ -34,7 +34,7 @@
           name="uil:sun"
           color="light"
           size="24"
-          v-if="colorMode.preference == 'dark'"
+          v-if="colorMode.value == 'dark'"
         />
         <Icon name="uil:moon" color="light" size="24" v-else />
       </button>
@@ -75,9 +75,9 @@ watch(showMenu, () => {
 
 const colorMode = useColorMode();
 const changeColor = () =>
-  (colorMode.preference = colorMode.preference === "dark" ? "light" : "dark");
+  (colorMode.value = colorMode.value === "dark" ? "light" : "dark");
 
 const colorControl = computed(() =>
-  colorMode.preference == "dark" ? "white" : "black"
+  colorMode.value == "dark" ? "white" : "black"
 );
 </script>

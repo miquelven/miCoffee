@@ -7,7 +7,7 @@
   }
 }
 
-#drinksExamples {
+.drinksExamples {
   padding: 70px 10px;
   min-height: 730px;
 
@@ -144,7 +144,7 @@
 }
 
 @media screen and (max-width: 870px) {
-  #drinksExamples {
+  .drinksExamples {
     h3 {
       font-size: 2rem;
     }
@@ -163,7 +163,7 @@
   }
 }
 @media screen and (max-width: 600px) {
-  #drinksExamples {
+  .drinksExamples {
     h3 {
       font-size: 1.7rem;
     }
@@ -180,7 +180,7 @@
 }
 
 @media screen and (max-width: 400px) {
-  #drinksExamples {
+  .drinksExamples {
     h3 {
       font-size: 1.3rem;
     }

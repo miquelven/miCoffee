@@ -3,7 +3,7 @@
     <div class="container">
       <h1 @click="$router.push('/')"><span>Mi</span>Drinks</h1>
       <div id="searchArea">
-        <InputSearch :autofocus="true" placeholder="" />
+        <InputSearch :autofocus="true" placeholder="Search" />
         <Icon name="uil:search" color="white" id="searchIcon" />
       </div>
       <HeaderMenu :routes="routes" />

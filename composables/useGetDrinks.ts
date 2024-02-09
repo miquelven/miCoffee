@@ -30,7 +30,28 @@ export default function () {
     return { data, pending };
   };
 
+  const getDrinkFiltered = async (query: string) => {
+    const { data, pending } = await useFetch(
+      `https://www.thecocktaildb.com/api/json/v1/1/filter.php?${query}`,
+      {
+        lazy: true,
+        server: false,
+        transform: (data) => {
+          return data.drinks.map((d) => {
+            return {
+              name: d.strDrink,
+              img: d.strDrinkThumb,
+              id: d.idDrink,
+            };
+          });
+        },
+      }
+    );
+    return { data, pending };
+  };
+
   return {
     getDrink,
+    getDrinkFiltered,
   };
 }

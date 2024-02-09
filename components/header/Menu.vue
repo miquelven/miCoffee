@@ -6,8 +6,8 @@
           <a href="#">{{ route.label }}</a>
         </NuxtLink>
       </li>
-      <button @click="changeColor">
-        <template v-if="colorMode.value == 'dark'">
+      <button @click="toggleDark()">
+        <template v-if="isDark == true">
           <Icon name="uil:sun" color="white" size="24" />
         </template>
         <template v-else>
@@ -29,13 +29,8 @@
       <Icon name="uil:times" :color="colorControl" size="32" />
     </span>
     <ul class="menu">
-      <button id="colorTheme" @click="changeColor">
-        <Icon
-          name="uil:sun"
-          color="light"
-          size="24"
-          v-if="colorMode.value == 'dark'"
-        />
+      <button id="colorTheme" @click="toggleDark()">
+        <Icon name="uil:sun" color="light" size="24" v-if="isDark == true" />
         <Icon name="uil:moon" color="light" size="24" v-else />
       </button>
       <span>Menu</span>
@@ -73,11 +68,13 @@ watch(showMenu, () => {
   }
 });
 
-const colorMode = useColorMode();
-const changeColor = () =>
-  (colorMode.value = colorMode.value === "dark" ? "light" : "dark");
+const colorControl = computed(() => (isDark.value == true ? "white" : "black"));
 
-const colorControl = computed(() =>
-  colorMode.value == "dark" ? "white" : "black"
-);
+const isDark = useDark({
+  selector: "html",
+  attribute: "class",
+  valueDark: "dark",
+  valueLight: "light",
+});
+const toggleDark = useToggle(isDark);
 </script>

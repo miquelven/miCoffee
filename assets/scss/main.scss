@@ -38,14 +38,14 @@ body {
   min-height: 100vh;
 }
 
-@import "./partials/header";
-@import "./partials/footer";
-@import "./partials/hero";
-@import "./partials/coffeeArea";
-@import "./partials/randomDrinks";
-@import "./partials/card";
-@import "./partials/cardInfo";
-@import "./partials/drinkFilter";
-@import "./partials/drinkFilterList";
-@import "./partials/contact";
-@import "./partials/about";
+@import "./partials/layoutStyle/header";
+@import "./partials/layoutStyle/footer";
+@import "./partials/homeStyle/hero";
+@import "./partials/homeStyle/coffeeArea";
+@import "./partials/homeStyle/randomDrinks";
+@import "./partials/card/card";
+@import "./partials/card/cardInfo";
+@import "./partials/filter/drinkFilter";
+@import "./partials/filter/drinkFilterList";
+@import "./partials/pagesStyle/contact";
+@import "./partials/pagesStyle/about";

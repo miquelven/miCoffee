@@ -1,4 +1,4 @@
-# MiCoffee ☕
+# MiDrinks 🍷
 
 #### Realizado com o intuito de fazer uma aplicação Nuxt 3 bem estruturada, consumir várias APIs e práticar Typescript e Scss.
 
@@ -16,6 +16,10 @@
 </div>
 &nbsp;
 
-## Observações 👀
+## Funcionalidades 👀
 
-- Projeto em andamento.
+* Filtragem de bebidas
+* Busca de informações de bebidas
+* Bebidas aleatórias
+* Busca de bebidas através do ingrediente
+

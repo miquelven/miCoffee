@@ -139,6 +139,10 @@ definePageMeta({
   layout: "default",
 });
 
+// TOAST
+
+const nuxtApp = useNuxtApp();
+
 // EFFECT HOVER CARD
 
 const target = ref();
@@ -235,7 +239,7 @@ const getRandomDrinks = async (query) => {
     drinkCardInfos.value = data;
     isPending.value = pending;
   } catch (e) {
-    // colocar o toast
+    nuxtApp.$toast.error("Error when fetching data");
   }
 };
 

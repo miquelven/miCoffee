@@ -59,7 +59,7 @@ const getDrinksData = async () => {
     drinksData.value = data;
     isPending.value = pending;
   } catch (e) {
-    // TOAST
+    nuxtApp.$toast.error("Error when fetching data");
   }
 };
 

@@ -87,10 +87,14 @@ const ingredients = ref([]);
 const isPending = ref(true);
 
 const getIngredients = async (d) => {
-  for (let i = 0; i < d.value[0].ingredients.length; i++) {
-    ingredients.value = await useFetch(
-      `https://www.thecocktaildb.com/images/ingredients/${d.value[0].ingredients[i]}.png`
-    );
+  try {
+    for (let i = 0; i < d.value[0].ingredients.length; i++) {
+      ingredients.value = await useFetch(
+        `https://www.thecocktaildb.com/images/ingredients/${d.value[0].ingredients[i]}.png`
+      );
+    }
+  } catch (e) {
+    nuxtApp.$toast.error("Error when fetching data");
   }
 };
 
@@ -107,7 +111,7 @@ const getDrink = async () => {
 
     setTimeout(() => getIngredients(drinkInfo.value), 600);
   } catch (e) {
-    // COLOCAR TOAST
+    nuxtApp.$toast.error("Error when fetching data");
   }
 };
 

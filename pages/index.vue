@@ -128,9 +128,9 @@
   </section>
 
   <section id="drinkFilter" data-aos="zoom-in">
-    <DrinkFilter @filter="filterDrinks" />
+    <FilterDrinkFilter @filter="filterDrinks" />
 
-    <DrinkFilterList :drinks="drinksFiltered" />
+    <FilterDrinkFilterList :drinks="drinksFiltered" />
   </section>
 </template>
 
@@ -138,6 +138,8 @@
 definePageMeta({
   layout: "default",
 });
+
+// EFFECT HOVER CARD
 
 const target = ref();
 const elementXValue = ref(0);
@@ -182,8 +184,9 @@ const resetHoverEffects = () => {
   target.value.style = "perspective(0px) rotateX(0deg) rotateY(0deg) scale(1);";
 };
 
+// REQUEST API
+
 const isPending = ref(false);
-const isPendingFiltered = ref(false);
 
 const getRandomDrinks = async (query) => {
   let drinksArray = [];
@@ -245,6 +248,8 @@ const resetDrinkCardInfo = () => {
 
   getRandomDrinks("random.php");
 };
+
+// REQUEST API WITH COMPOSABLE
 
 const useDrinks = useGetDrinks();
 

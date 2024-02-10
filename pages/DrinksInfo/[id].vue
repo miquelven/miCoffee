@@ -107,7 +107,7 @@ const getDrink = async () => {
 
     setTimeout(() => getIngredients(drinkInfo.value), 600);
   } catch (e) {
-    console.log("error" + e);
+    // COLOCAR TOAST
   }
 };
 

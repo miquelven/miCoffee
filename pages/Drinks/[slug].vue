@@ -1,7 +1,7 @@
 <template>
   <template v-if="isPending == true">
     <ul class="containerCards">
-      <li class="card" v-for="(item, index) of 8" :key="index">
+      <li class="card" v-for="index of 8" :key="index">
         <div
           class="cardInfoImgLoading"
           style="display: flex; justify-content: center; align-items: center"
@@ -59,7 +59,7 @@ const getDrinksData = async () => {
     drinksData.value = data;
     isPending.value = pending;
   } catch (e) {
-    console.log("error" + e);
+    // TOAST
   }
 };
 

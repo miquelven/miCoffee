@@ -6,7 +6,7 @@
         <InputSearch :autofocus="true" placeholder="Search" />
         <Icon name="uil:search" color="white" id="searchIcon" />
       </div>
-      <HeaderMenu :routes="routes" />
+      <LayoutComponentHeaderMenu :routes="routes" />
     </div>
   </header>
 </template>

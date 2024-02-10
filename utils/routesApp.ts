@@ -1,4 +1,7 @@
-import { RouteType } from "~/types/RouteType";
+interface RouteType {
+  path: string;
+  label: string;
+}
 
 export default () => {
   const routes: RouteType[] = [

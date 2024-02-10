@@ -1,11 +1,11 @@
 <template>
   <div>
-    <Header />
+    <LayoutComponentHeader />
     <main>
       <div id="content">
         <slot />
       </div>
     </main>
-    <Footer />
+    <LayoutComponentFooter />
   </div>
 </template>

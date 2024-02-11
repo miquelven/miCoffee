@@ -1,4 +1,14 @@
-# MiCoffee ☕
+# MiDrinks 🍷
+
+&nbsp;
+&nbsp;
+
+![ezgif com-animated-gif-maker (2)](https://github.com/miquelven/games_in_a_game/assets/67767211/975a8394-475e-4608-9956-d70d57651c9a)
+
+
+&nbsp;
+&nbsp;
+&nbsp;
 
 #### Realizado com o intuito de fazer uma aplicação Nuxt 3 bem estruturada, consumir várias APIs e práticar Typescript e Scss.
 
@@ -16,6 +26,11 @@
 </div>
 &nbsp;
 
-## Observações 👀
+## Funcionalidades 👀
 
-- Projeto em andamento.
+* Filtragem de bebidas
+* Busca de informações de bebidas
+* Bebidas aleatórias
+* Busca de bebidas através do ingrediente
+* Dark/Light Mode
+

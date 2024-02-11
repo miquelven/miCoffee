@@ -1,15 +1,21 @@
 html.light {
   #about {
-    background-color: transparent;
+    background-color: $light-primary;
     border: 2px solid $primary;
+
+    h2 {
+      color: $primary;
+    }
+    span {
+      color: #000;
+    }
   }
 }
 
 #about {
-  background-color: $dark-secondary;
+  background-color: $dark-primary;
   border-radius: 10px;
-  border: 2px solid $tertiary;
-  box-shadow: 3px 6px 10px $primary;
+  box-shadow: 5px 8px 0px $primary;
   padding: 20px 30px;
   margin: 80px auto;
   max-width: 1000px;

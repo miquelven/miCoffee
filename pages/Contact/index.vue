@@ -80,7 +80,10 @@
     <div data-aos="fade-up">
       <h2>Location:</h2>
       <p>
-        If you'd like to visit us in person, we're located at [insert address].
+        If you'd like to visit us in person, we're located at
+        <a href=""
+          >3987 Lake Tahoe Blvd, South Lake Tahoe, CA 96150, United States.</a
+        >
         Our team will be happy to welcome you and assist with any questions or
         requests
       </p>
@@ -89,16 +92,18 @@
         can. Thank you for choosing MiDrinks!
       </p>
     </div>
-    <iframe
-      data-aos="zoom-in"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12412.153339811737!2d-119.9860125128418!3d38.945952600000034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809990742180f7a7%3A0x1b3eb7cd52e2a205!2sApplebee&#39;s%20Grill%20%2B%20Bar!5e0!3m2!1spt-PT!2sbr!4v1707503271614!5m2!1spt-PT!2sbr"
-      width="100%"
-      height="450"
-      style="border: 0"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
+    <div id="mapArea">
+      <iframe
+        data-aos="zoom-in"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12412.153339811737!2d-119.9860125128418!3d38.945952600000034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809990742180f7a7%3A0x1b3eb7cd52e2a205!2sApplebee&#39;s%20Grill%20%2B%20Bar!5e0!3m2!1spt-PT!2sbr!4v1707503271614!5m2!1spt-PT!2sbr"
+        width="100%"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
   </section>
 </template>
 

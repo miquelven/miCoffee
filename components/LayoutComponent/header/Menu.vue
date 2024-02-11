@@ -35,7 +35,11 @@
       </button>
       <span>Menu</span>
 
-      <li v-for="(route, index) in props.routes" :key="index">
+      <li
+        v-for="(route, index) in props.routes"
+        :key="index"
+        @click="closeMenu()"
+      >
         <NuxtLink :to="route.path">
           <a href="#">{{ route.label }}</a>
         </NuxtLink>
@@ -54,18 +58,24 @@ const menuBar = ref<HTMLElement | null>(null);
 const menuIcon = ref<HTMLElement | null>(null);
 const closeIcon = ref<HTMLElement | null>(null);
 
+const openMenu = () => {
+  menuBar.value!.style.right = "0px";
+  menuIcon.value!.style.display = "none";
+  closeIcon.value!.style.display = "block";
+};
+
+const closeMenu = () => {
+  menuBar.value!.style.right = "-100vw";
+  closeIcon.value!.style.display = "none";
+  setTimeout(() => {
+    menuIcon.value!.style.display = "block";
+  }, 300);
+};
+
+const menuControl = () => (showMenu.value == true ? openMenu() : closeMenu());
+
 watch(showMenu, () => {
-  if (showMenu.value == true) {
-    menuBar.value!.style.right = "0px";
-    menuIcon.value!.style.display = "none";
-    closeIcon.value!.style.display = "block";
-  } else {
-    menuBar.value!.style.right = "-100vw";
-    closeIcon.value!.style.display = "none";
-    setTimeout(() => {
-      menuIcon.value!.style.display = "block";
-    }, 300);
-  }
+  menuControl();
 });
 
 const isDark = useDark({

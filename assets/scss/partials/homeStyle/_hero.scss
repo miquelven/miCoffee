@@ -1,29 +1,18 @@
 html.light {
   #leftSide {
     text-shadow: none !important;
+    h1 {
+      color: $primary !important;
+    }
     .purple-text-primary {
-      color: $secondary;
-      text-shadow: 2px 2px 4px #000 !important;
+      color: #000 !important;
+    }
+    .purple-text-secondary {
+      color: #000 !important;
     }
     p {
-      color: #000 !important;
+      color: $primary !important;
       text-shadow: none !important;
-    }
-
-    .purple-text-secondary {
-      text-shadow: none !important;
-    }
-  }
-
-  #rightSide {
-    img {
-      filter: brightness(2) contrast(1) saturate(1.5) !important;
-      box-shadow: 10px 10px 7px #000 !important;
-    }
-
-    img:hover {
-      filter: brightness(1) contrast(1.5) saturate(2) !important;
-      box-shadow: 15px 25px 25px #000 !important;
     }
   }
 }
@@ -41,18 +30,15 @@ html.light {
   }
 
   #leftSide {
-    text-shadow: 2px 4px 10px #000000a4;
     display: flex;
     flex-direction: column;
     gap: 30px;
     .purple-text-primary {
-      color: $secondary;
-      text-shadow: 2px 4px 6px #000;
+      color: $primary;
       font-size: 3.6rem;
     }
     .purple-text-secondary {
       color: $primary;
-      text-shadow: 2px 4px 6px #000;
     }
     h1 {
       font-size: 2.8rem;
@@ -60,9 +46,8 @@ html.light {
       font-weight: bold;
     }
     p {
-      color: #ffffffab;
+      color: $tertiary;
       font-size: 1.2rem;
-      text-shadow: 2px 4px 6px #000;
     }
 
     @media screen and (max-width: 1040px) {
@@ -120,13 +105,11 @@ html.light {
     img {
       width: 80%;
       margin: 0 auto;
-      filter: brightness(1.5) contrast(2) saturate(1);
-      box-shadow: 4px 4px 10px purple;
       transition: all ease-in 300ms;
     }
     img:hover {
-      filter: brightness(2) contrast(2) saturate(1.5);
-      box-shadow: 15px 25px 25px #000;
+      filter: brightness(0.7);
+      border-radius: 10px;
     }
   }
 

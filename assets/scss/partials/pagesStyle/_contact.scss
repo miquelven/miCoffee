@@ -2,10 +2,32 @@ html.light {
   #contact {
     input,
     textarea {
-      box-shadow: 0 0 10px $secondary;
+      box-shadow: 4px 6px 0px $primary;
     }
+
+    input:focus,
+    textarea:focus {
+      background-color: $light-primary;
+    }
+
     button {
-      color: #fff;
+      border: 2px solid $primary !important;
+      background-color: transparent !important;
+      color: $dark-secondary;
+    }
+
+    button:hover {
+      background-color: $dark-secondary !important;
+      color: $secondary;
+    }
+    h2 {
+      color: $dark-secondary;
+    }
+    p {
+      color: $primary !important;
+      a {
+        color: $dark-primary;
+      }
     }
   }
 }
@@ -21,16 +43,14 @@ html.light {
     h2 {
       font-size: 2rem;
       color: $primary;
-      text-shadow: 1px 2px 2px $tertiary;
       position: relative;
     }
     h2::before {
       content: "";
       width: 10px;
       height: 10px;
-      background: $tertiary;
+      background: $primary;
       border-radius: 50%;
-      box-shadow: 0px 0px 15px $secondary;
       position: absolute;
       top: 20px;
       left: -17px;
@@ -101,12 +121,13 @@ html.light {
         border-radius: 4px;
         font-weight: bold;
         padding: 4px 0;
+        border: 2px solid transparent;
         transition: all ease 300ms;
       }
 
       button:hover {
-        background: $secondary;
-        box-shadow: 0px 0px 10px $tertiary;
+        border: 2px solid $primary;
+        background-color: transparent;
       }
     }
 
@@ -135,7 +156,6 @@ html.light {
 
 @media screen and (max-width: 670px) {
   #contact {
-    width: 100vw !important;
     gap: 80px !important;
     div {
       padding: 0 20px;
@@ -156,6 +176,7 @@ html.light {
 
 @media screen and (max-width: 440px) {
   #contact {
+    width: 100%;
     div {
       h2 {
         font-size: 1.6rem !important;
@@ -163,6 +184,16 @@ html.light {
 
       h2::before {
         top: 15px;
+      }
+    }
+
+    #mapArea {
+      position: relative;
+      iframe {
+        position: absolute;
+        top: 0;
+        left: -20px;
+        width: 100vw;
       }
     }
   }

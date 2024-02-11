@@ -11,14 +11,14 @@ html {
 
 html.light {
   body {
-    background-color: #fff;
+    background-color: $light-secondary;
     color: #000;
   }
 }
 
 html.dark {
   body {
-    background-color: #000;
+    background-color: $dark-primary;
   }
 }
 
@@ -36,6 +36,13 @@ body {
 
 #content {
   min-height: 100vh;
+}
+
+@media screen and (max-width: 1100px) {
+  .container,
+  #content {
+    padding-inline: 20px;
+  }
 }
 
 @import "./partials/layoutStyle/header";

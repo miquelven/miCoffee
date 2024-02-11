@@ -16,7 +16,7 @@
       v-model="page"
       :total="drink"
       :ui="{ rounded: 'first-of-type:rounded-s-md last-of-type:rounded-e-md' }"
-      :active-button="{ color: 'purple' }"
+      :active-button="{ color: 'white' }"
       @click="update"
     >
       <UTooltip text="Previous page">

@@ -1,3 +1,4 @@
+// light mode
 html.light {
   header {
     h1 {
@@ -5,7 +6,7 @@ html.light {
     }
 
     span {
-      color: #000;
+      color: $dark-tertiary;
     }
 
     #menuBar ul {
@@ -15,27 +16,27 @@ html.light {
     .menu {
       li {
         a {
-          color: #000 !important;
+          color: $dark-tertiary !important;
         }
       }
     }
 
     #menuIcon {
       svg {
-        color: #000 !important;
+        color: $dark-tertiary !important;
       }
     }
 
     #closeIcon {
       svg {
-        color: #000 !important;
+        color: $dark-tertiary !important;
       }
     }
 
     #searchArea {
       input {
         box-shadow: 2px 4px 0px $secondary;
-        color: #000;
+        color: $dark-tertiary;
         transition: box-shadow ease 300ms;
       }
       input:focus {
@@ -45,6 +46,7 @@ html.light {
   }
 }
 
+// dark mode
 header {
   width: 100%;
   padding: 16px 0px;
@@ -55,17 +57,18 @@ header {
     justify-content: space-between;
     align-items: center;
   }
-
+  // logo
   h1 {
     color: $tertiary;
     cursor: pointer;
+    // logo detail
     span {
       font-size: 1.2rem;
       margin-right: 2px;
       color: $primary;
     }
   }
-
+  // input area
   #searchArea {
     position: relative;
     width: 35%;
@@ -86,7 +89,7 @@ header {
       top: 7px;
     }
   }
-
+  // menu desktop
   .menu {
     display: flex;
     text-align: center;
@@ -97,7 +100,7 @@ header {
       margin-bottom: 20px;
       color: $tertiary;
     }
-
+    // links menu
     li {
       list-style: none;
       a {
@@ -129,7 +132,7 @@ header {
       margin-left: 20px;
     }
   }
-
+  // menu mobile
   #menuBar {
     display: none;
     position: absolute;

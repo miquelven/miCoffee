@@ -1,3 +1,4 @@
+// light mode
 html.light {
   #drinkFilter {
     box-shadow: 4px 8px 0px $dark-secondary;
@@ -15,7 +16,7 @@ html.light {
         }
       }
       button {
-        color: #000;
+        color: $dark-tertiary;
         background: transparent;
         box-shadow: 1px 3px 0px $primary;
       }
@@ -27,6 +28,7 @@ html.light {
   }
 }
 
+//dark mode
 #drinkFilter {
   margin: 50px auto;
   padding: 10px;
@@ -60,7 +62,7 @@ html.light {
       }
 
       select {
-        background-color: #000;
+        background-color: $dark-tertiary;
         border-radius: 5px;
         font-size: 0.95rem;
         padding: 3px 5px;
@@ -69,7 +71,7 @@ html.light {
         }
 
         option:not(:checked) {
-          background: #000;
+          background: $dark-tertiary;
         }
       }
     }
@@ -80,10 +82,10 @@ html.light {
       text-transform: uppercase;
       background: linear-gradient(
         to bottom right,
-        #000 30%,
+        $dark-tertiary 30%,
         $primary,
         $primary 10%,
-        #000 20%,
+        $dark-tertiary 20%,
         $primary
       );
       border-radius: 10px;

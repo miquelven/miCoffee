@@ -1,3 +1,4 @@
+// light mode
 html.light {
   #drinkInfoArea {
     .cardInfo {
@@ -36,6 +37,7 @@ html.light {
   }
 }
 
+// dark mode
 #drinkInfoArea {
   padding: 0 20px;
   .cardInfo {
@@ -131,8 +133,8 @@ html.light {
           background: linear-gradient(
             to bottom left,
             $secondary,
-            #000 30%,
-            #000,
+            $dark-tertiary 30%,
+            $dark-tertiary,
             $secondary 95%
           );
           position: absolute;

@@ -12,7 +12,7 @@ html {
 html.light {
   body {
     background-color: $light-secondary;
-    color: #000;
+    color: $dark-tertiary;
   }
 }
 
@@ -24,7 +24,7 @@ html.dark {
 
 body {
   font-family: "Lato", sans-serif;
-  color: #fdfdfd;
+  color: $bg-light;
   overflow-x: hidden;
 }
 

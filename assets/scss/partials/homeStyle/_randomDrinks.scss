@@ -101,6 +101,7 @@ html.light {
         justify-content: center;
         align-items: center;
         position: relative;
+
         p {
           font-size: 1.2rem;
           margin-top: 10px;
@@ -113,6 +114,7 @@ html.light {
           box-shadow: 0px 0px 5px #000;
           border-radius: 5%;
           position: relative;
+
           transition: all ease 1300ms;
         }
         div:hover {
@@ -193,6 +195,9 @@ html.light {
             opacity: 0.75;
             filter: brightness(0.8);
           }
+        }
+        .infosDrink::-webkit-scrollbar {
+          display: none;
         }
         span {
           font-size: 0.9rem;

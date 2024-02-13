@@ -6,15 +6,20 @@
   />
 </template>
 
-<script setup>
-defineProps(["autofocus", "placeholder"]);
+<script setup lang="ts">
+import { useRouter } from "vue-router";
+
+defineProps<{
+  autofocus: boolean;
+  placeholder: string;
+}>();
 
 const router = useRouter();
 
-const redirectDrinkView = (e) => {
-  if (e.key == "Enter") {
-    router.push(`/drinks/${e.target.value}`);
-    e.target.value = "";
+const redirectDrinkView = (e: KeyboardEvent) => {
+  if (e.key === "Enter") {
+    router.push(`/drinks/${(e.target as HTMLInputElement).value}`);
+    (e.target as HTMLInputElement).value = "";
   }
 };
 </script>

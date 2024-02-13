@@ -42,5 +42,3 @@
     <span data-aos="fade-up" data-aos-delay="600">The Midrinks Team</span>
   </section>
 </template>
-
-<script setup></script>

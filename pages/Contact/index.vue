@@ -99,7 +99,6 @@
         width="100%"
         height="450"
         style="border: 0"
-        allowfullscreen=""
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
@@ -107,14 +106,14 @@
   </section>
 </template>
 
-<script setup>
-const email = ref(null);
-const textarea = ref(null);
+<script setup lang="ts">
+const email = ref<Ref | null>(null);
+const textarea = ref<Ref | null>(null);
 
-const errorEmail = ref(null);
-const errorMessage = ref(null);
+const errorEmail = ref<Ref | null>(null);
+const errorMessage = ref<Ref | null>(null);
 
-const button = ref(null);
+const button = ref<Ref | null>(null);
 
 const validateFields = () => {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

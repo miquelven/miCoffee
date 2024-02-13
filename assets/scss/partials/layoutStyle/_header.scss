@@ -1,6 +1,7 @@
 // light mode
 html.light {
   header {
+    border-bottom: 2px solid $secondary !important;
     h1 {
       color: $dark-secondary;
     }
@@ -36,7 +37,7 @@ html.light {
     #searchArea {
       input {
         box-shadow: 2px 4px 0px $secondary;
-        color: $dark-tertiary;
+        color: $dark-secondary;
         transition: box-shadow ease 300ms;
       }
       input:focus {

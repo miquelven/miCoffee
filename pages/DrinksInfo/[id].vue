@@ -32,11 +32,7 @@
 
   <template v-else>
     <div v-if="drinkInfo" id="drinkInfoArea">
-      <div
-        v-for="(drink, index) in drinkInfo.value"
-        :key="index"
-        class="cardInfo"
-      >
+      <div v-for="(drink, index) in drinkInfo" :key="index" class="cardInfo">
         <div class="cardInfoImgArea">
           <img data-aos="zoom-in" :src="drink.img" alt="Imagem de uma bebida" />
           <div
@@ -79,43 +75,24 @@
   </template>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const route = useRoute();
+const ingredients = ref<Ref | []>([]);
 
-const drinkInfo = ref([]);
-const ingredients = ref([]);
-const isPending = ref(true);
+const id = route.params.id;
+const useDrinks = useGetDrinks();
 
-const getIngredients = async (d) => {
-  try {
-    for (let i = 0; i < d.value[0].ingredients.length; i++) {
-      ingredients.value = await useFetch(
-        `https://www.thecocktaildb.com/images/ingredients/${d.value[0].ingredients[i]}.png`
-      );
-    }
-  } catch (e) {
-    nuxtApp.$toast.error("Error when fetching data");
+const { getDrink } = useDrinks;
+
+const { data: drinkInfo, pending: isPending } = await getDrink(
+  `lookup.php?i=${id}`
+);
+
+if (isPending.value == false) {
+  for (let i = 0; i < drinkInfo.value[0].ingredients.length; i++) {
+    ingredients.value = await useFetch(
+      `https://www.thecocktaildb.com/images/ingredients/${drinkInfo.value[0].ingredients[i]}.png`
+    );
   }
-};
-
-const getDrink = async () => {
-  try {
-    const id = route.params.id;
-    const useDrinks = useGetDrinks();
-
-    const { getDrink } = useDrinks;
-
-    const { data, pending } = await getDrink(`lookup.php?i=${id}`);
-    drinkInfo.value = data;
-    isPending.value = pending;
-
-    setTimeout(() => getIngredients(drinkInfo.value), 600);
-  } catch (e) {
-    nuxtApp.$toast.error("Error when fetching data");
-  }
-};
-
-onBeforeMount(() => {
-  getDrink();
-});
+}
 </script>

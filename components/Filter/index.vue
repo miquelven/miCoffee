@@ -2,54 +2,46 @@
   <section id="drinkFilter" data-aos="zoom-in">
     <FilterDrinkFilter @filter="filterDrinks" />
 
-    <FilterDrinkFilterList :drinks="drinksFiltered" />
+    <FilterDrinkFilterList
+      data-aos="zoom-in"
+      data-aos-delay="400"
+      :drinks="drinksFiltered"
+    />
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
+interface Drink {
+  [items: string]: {
+    [item: string]: string;
+    name: string;
+  };
+}
+
 const useDrinks = useGetDrinks();
 
 const { getDrinkFiltered } = useDrinks;
 
-const drinksFiltered = ref([]);
+const drinksFiltered = ref<Drink[]>([]);
 
-const filterDrinks = async (filter) => {
+const filterDrinks = async (filter: string[]) => {
   drinksFiltered.value = [];
+  const letters = ["a", "c", "g"];
   for (let i = 0; i < filter.length; i++) {
-    switch (i) {
-      case 0:
-        if (filter[0] !== "") {
-          const { data: dataAlcoholic } = await getDrinkFiltered(
-            `a=${filter[0]}`
-          );
-          drinksFiltered.value = dataAlcoholic.value;
-        }
-
-        break;
-      case 1:
-        if (filter[1] !== "") {
-          const { data: dataDrink } = await getDrinkFiltered(`c=${filter[1]}`);
-          verifyDrinksFiltered(dataDrink.value);
-        }
-        break;
-      case 2:
-        if (filter[2] !== "") {
-          const { data: dataGlass } = await getDrinkFiltered(`g=${filter[2]}`);
-          verifyDrinksFiltered(dataGlass.value);
-        }
-        break;
+    if (filter[i] !== "") {
+      const { data } = await getDrinkFiltered(`${letters[i]}=${filter[i]}`);
+      if (data.value.length > 0) verifyDrinksFiltered(data);
     }
   }
 };
-
-const verifyDrinksFiltered = (data) => {
-  let newDrinksFiltered = [];
-  if (drinksFiltered.value.length == 0) drinksFiltered.value = data;
-  for (let i = 0; i < data.length; i++) {
-    drinksFiltered.value.map((drink) => {
-      if (data[i]) {
-        if (drink.name == data[i].name) {
-          newDrinksFiltered.push(data[i]);
+const verifyDrinksFiltered = (data: Ref<Drink[]>) => {
+  let newDrinksFiltered: any[] = [];
+  if (drinksFiltered.value.length == 0) drinksFiltered.value = data.value;
+  for (let i = 0; i < data.value.length; i++) {
+    drinksFiltered.value.map((drink: any) => {
+      if (data.value[i]) {
+        if (drink.name == data.value[i].name) {
+          newDrinksFiltered.push(data.value[i]);
         }
       }
     });

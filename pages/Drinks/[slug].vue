@@ -18,11 +18,7 @@
   <template v-else>
     <div data-aos="zoom-in" data-aos-delay="600">
       <ul class="containerCards" v-if="drinksData">
-        <li
-          class="card"
-          v-for="(drink, index) in drinksData.value"
-          :key="index"
-        >
+        <li class="card" v-for="(drink, index) in drinksData" :key="index">
           <div class="cardInfoImg">
             <img :src="drink.img" alt="Imagem de uma bebida" />
           </div>
@@ -38,11 +34,9 @@
   </template>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const route = useRoute();
 const router = useRouter();
-
-const drinksData = ref({});
 
 const query = route.params.slug;
 
@@ -50,24 +44,11 @@ const useDrinks = useGetDrinks();
 
 const { getDrink } = useDrinks;
 
-const isPending = ref(true);
+const { data: drinksData, pending: isPending } = await getDrink(
+  `search.php?s=${query}`
+);
 
-const getDrinksData = async () => {
-  try {
-    const { data, pending } = await getDrink(`search.php?s=${query}`);
-
-    drinksData.value = data;
-    isPending.value = pending;
-  } catch (e) {
-    nuxtApp.$toast.error("Error when fetching data");
-  }
-};
-
-const redirectMoreInfo = (id) => {
+const redirectMoreInfo = (id: string) => {
   router.push(`/drinksInfo/${id}`);
 };
-
-onBeforeMount(() => {
-  getDrinksData();
-});
 </script>

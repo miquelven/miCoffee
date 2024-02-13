@@ -36,17 +36,23 @@
   </section>
 </template>
 
-<script setup>
-// EFFECT HOVER CARD
+<script setup lang="ts">
+import { ref, computed } from "vue";
 
-const target = ref();
+// Definindo uma interface para o evento de mouse
+interface MouseEvent {
+  offsetX: number;
+  offsetY: number;
+}
+
+const target = ref<HTMLElement | null>(null);
 const elementXValue = ref(0);
 const elementYValue = ref(0);
 const elementHeightValue = ref(0);
 const elementWidthValue = ref(0);
 const isOutSideValue = ref(false);
-const rX = ref(0);
-const rY = ref(0);
+const rX = ref("");
+const rY = ref("");
 
 const { isOutside, elementHeight, elementWidth } = useMouseInElement(
   target.value
@@ -67,7 +73,7 @@ const cardTransform = computed(() => {
   return `perspective(${elementWidthValue.value}px) rotateX(${rX.value}deg) rotateY(${rY.value}deg) scale(1.05)`;
 });
 
-const hoverEffects = (event) => {
+const hoverEffects = (event: MouseEvent) => {
   const { offsetX, offsetY } = event;
   elementXValue.value = offsetX;
   elementYValue.value = offsetY;
@@ -77,6 +83,9 @@ const hoverEffects = (event) => {
 };
 
 const resetHoverEffects = () => {
-  target.value.style = "perspective(0px) rotateX(0deg) rotateY(0deg) scale(1);";
+  if (target.value) {
+    target.value.style.transition = "all ease 300ms";
+    target.value.style.transform = cardTransform.value;
+  }
 };
 </script>

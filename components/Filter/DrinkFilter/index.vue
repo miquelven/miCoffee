@@ -33,7 +33,7 @@
   </form>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const isAlcoholic = ref("");
 const glass = ref("");
 const category = ref("");

@@ -52,6 +52,8 @@ const drinksLength = ref(10);
 
 const drinkValue = ref([]);
 
+// pagination
+
 const update = () => {
   const newDrinksValue = [];
   const startIndex = (page.value - 1) * page_count.value;
@@ -76,18 +78,18 @@ const drink = computed(() => {
 const router = useRouter();
 const route = useRoute();
 
-const updateScroll = () => {
-  if (route.fullPath == "/#drinkFilter") {
-    router.push(`/`);
-  }
-  console.log(route);
-};
-onMounted(() => updateScroll());
+// const updateScroll = () => {
+//   if (route.fullPath == "/#drinkFilter") {
+//     router.push(`/`);
+//   }
+// };
+// onMounted(() => updateScroll());
 
 const redirectShowMore = (id) => {
   router.push(`drinksInfo/${id}`);
 };
 
+// show items
 watch(
   () => props.drinks,
   () => update()

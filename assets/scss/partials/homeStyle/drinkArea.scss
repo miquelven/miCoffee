@@ -1,6 +1,6 @@
 // light mode
 html.light {
-  #coffeeArea {
+  #drinkArea {
     box-shadow: 4px 8px 0px $primary;
     #titleInput {
       color: $dark-primary;
@@ -23,7 +23,7 @@ html.light {
 }
 
 // dark mode
-#coffeeArea {
+#drinkArea {
   border-radius: 20px;
   padding: 40px;
   margin: 0 auto;
@@ -59,7 +59,7 @@ html.light {
     }
   }
 
-  #coffeeDescription {
+  #drinkDescription {
     display: flex;
     align-items: center;
 
@@ -92,7 +92,7 @@ html.light {
       }
     }
 
-    #iconCoffee {
+    #iconDrink {
       position: absolute;
       right: -10px;
       bottom: -20px;
@@ -105,7 +105,7 @@ html.light {
     #inputSearchArea {
       margin: 0 auto;
     }
-    #coffeeDescription {
+    #drinkDescription {
       flex-direction: column;
     }
     #imgDescription {
@@ -113,7 +113,7 @@ html.light {
         width: 60% !important;
       }
     }
-    #iconCoffee {
+    #iconDrink {
       bottom: -30px !important;
       right: -30px !important;
     }
@@ -152,7 +152,7 @@ html.light {
         font-size: 0.8rem !important;
       }
     }
-    #iconCoffee {
+    #iconDrink {
       width: 40% !important;
       opacity: 40%;
     }
@@ -184,13 +184,13 @@ html.light {
       width: 100% !important;
     }
   }
-  #coffeeArea {
+  #drinkArea {
     width: 100% !important;
   }
 }
 
 @media screen and (max-width: 320px) {
-  #coffeeArea {
+  #drinkArea {
     padding: 20px 14px !important;
   }
 }

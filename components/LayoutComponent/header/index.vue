@@ -4,7 +4,7 @@
       <h1 @click="$router.push('/')"><span>Mi</span>Drinks</h1>
       <div id="searchArea">
         <InputSearch :autofocus="true" placeholder="Search" />
-        <Icon name="uil:search" color="white" id="searchIcon" />
+        <Icon name="uil:search" color="#6c757d" id="searchIcon" />
       </div>
       <LayoutComponentHeaderMenu :routes="routes" />
     </div>

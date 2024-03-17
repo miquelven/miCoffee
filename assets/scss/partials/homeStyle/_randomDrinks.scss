@@ -24,25 +24,11 @@ html.light {
       }
 
       button {
-        background: linear-gradient(
-          to bottom right,
-          #fff 20%,
-          $secondary,
-          $secondary 20%,
-          #fff 20%,
-          $secondary,
-          #fff 30%,
-          $secondary 20%,
-          #fff 50%,
-          $secondary 80%
-        );
-        box-shadow: 2px 1px 4px $dark-primary;
+        background: $secondary;
       }
 
       button:hover {
-        box-shadow: 4px 3px 0px $primary;
-        opacity: 1;
-        filter: brightness(1);
+        opacity: 0.7;
       }
     }
     span {
@@ -70,7 +56,7 @@ html.light {
   min-height: 730px;
 
   position: relative;
-  margin: 100px 0 40px;
+  margin: 150px 0;
   h3 {
     font-size: 2.5rem;
     text-align: center;
@@ -87,6 +73,8 @@ html.light {
       padding: 10px;
       z-index: 99;
       transition: all ease 300ms;
+      background: $primary;
+      border-radius: 50%;
     }
 
     #resetButton:hover {
@@ -114,14 +102,10 @@ html.light {
           min-width: 252px;
           height: 40vh;
           overflow: hidden;
-          box-shadow: 0px 0px 5px $dark-tertiary;
           border-radius: 5%;
           position: relative;
 
           transition: all ease 1300ms;
-        }
-        div:hover {
-          box-shadow: 4px 4px 2px $primary;
         }
         div:hover .imgDrink {
           top: -40vh;
@@ -145,10 +129,17 @@ html.light {
           inset: 0;
           transition: all ease 550ms;
         }
+        &:hover .infosDrink {
+          display: flex;
+        }
         .infosDrink {
+          border: 1px solid $dark-tertiary;
+          display: none;
           width: 100%;
+          flex-direction: column;
           position: absolute;
-          top: -40vh;
+          top: 0;
+          z-index: -1;
           padding: 25px;
           transition: all ease 350ms;
           transition-delay: 250ms;
@@ -178,17 +169,10 @@ html.light {
           button {
             width: 50%;
             margin: 30px auto;
-            background: linear-gradient(
-              to bottom right,
-              $dark-tertiary 30%,
-              $primary,
-              $primary 10%,
-              $dark-tertiary 20%,
-              $primary
-            );
+            background: $primary;
             border-radius: 5px;
             padding: 5px 0px;
-            box-shadow: 4px 7px 10px rgba(0 0 0 / 0.5);
+            box-shadow: 0px 0px 2px $dark-tertiary;
             opacity: 1;
             font-weight: bold;
             transition: all ease 1s;

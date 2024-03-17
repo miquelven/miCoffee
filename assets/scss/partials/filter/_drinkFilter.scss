@@ -1,7 +1,7 @@
 // light mode
 html.light {
   #drinkFilter {
-    box-shadow: 4px 8px 0px $dark-secondary;
+    background: transparent;
     h2 {
       color: $dark-secondary !important;
     }
@@ -9,20 +9,18 @@ html.light {
       label {
         select {
           background: $tertiary;
-          font-weight: bold;
         }
         option:not(:checked) {
           background: transparent;
         }
       }
       button {
-        color: $dark-tertiary;
-        background: transparent;
-        box-shadow: 1px 3px 0px $primary;
+        color: $light-primary;
+        background: $dark-primary;
       }
-
       button:hover {
-        box-shadow: 4px 6px 0px $primary;
+        background: $tertiary;
+        color: $dark-primary;
       }
     }
   }
@@ -31,10 +29,11 @@ html.light {
 //dark mode
 #drinkFilter {
   margin: 50px auto;
-  padding: 10px;
+  padding: 2.5rem;
   border-radius: 20px;
-  box-shadow: 4px 8px 0px $secondary;
-  width: 70%;
+  background-color: $primary;
+  box-shadow: 0px 0px 0.15rem $dark-tertiary;
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,6 +48,7 @@ html.light {
   form {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 80px;
     margin-bottom: 40px;
@@ -58,47 +58,38 @@ html.light {
       gap: 10px;
 
       span {
+        text-align: center;
         font-size: 1.3rem;
       }
 
       select {
-        background-color: $dark-tertiary;
+        background-color: $dark-secondary;
         border-radius: 5px;
         font-size: 0.95rem;
+        outline: none;
         padding: 3px 5px;
         option {
           outline: none;
-        }
-
-        option:not(:checked) {
-          background: $dark-tertiary;
         }
       }
     }
 
     button {
+      color: $dark-tertiary;
       font-size: 0.9rem;
       font-weight: bold;
       text-transform: uppercase;
-      background: linear-gradient(
-        to bottom right,
-        $dark-tertiary 30%,
-        $primary,
-        $primary 10%,
-        $dark-tertiary 20%,
-        $primary
-      );
+      background: $secondary;
       border-radius: 10px;
-      padding: 6px 10px;
+      padding: 6px 14px;
       align-self: center;
-      box-shadow: 3px 4px 10px rgba(0 0 0 / 0.7);
       transition: all ease 300ms;
     }
 
     button:hover {
-      box-shadow: 1px 3px 0px $tertiary;
-      filter: brightness(1.2);
+      color: $tertiary;
       transform: scale(1.05);
+      background: $dark-secondary;
     }
   }
 }

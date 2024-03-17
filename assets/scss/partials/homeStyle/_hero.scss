@@ -123,3 +123,10 @@ html.light {
   bottom: 0;
   right: 0;
 }
+
+@media screen and (max-width: 640px) {
+  #hero::before,
+  #hero::after {
+    bottom: -50px;
+  }
+}

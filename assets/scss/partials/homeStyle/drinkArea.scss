@@ -1,16 +1,18 @@
 // light mode
 html.light {
   #drinkArea {
-    box-shadow: 4px 8px 0px $primary;
+    background: transparent;
     #titleInput {
       color: $dark-primary;
     }
     #inputSearch {
-      box-shadow: 2px 2px 0px $primary !important;
+      box-shadow: 0px 0px 2px $dark-tertiary !important;
+      color: $primary;
     }
     #inputSearch:focus {
-      box-shadow: 4px 4px 0px $primary !important;
+      color: $dark-tertiary;
     }
+
     #infosDescription {
       h3 {
         color: $dark-primary !important;
@@ -24,16 +26,17 @@ html.light {
 
 // dark mode
 #drinkArea {
+  background-color: $dark-secondary;
+  width: 100%;
   border-radius: 20px;
-  padding: 40px;
-  margin: 0 auto;
-  margin-bottom: 50px;
-  box-shadow: 4px 8px 0px $secondary;
-  width: 90%;
+  padding: 2.5rem;
+  margin: 12.5rem auto 0 auto;
+  box-shadow: 0px 0px 0.15rem $dark-tertiary;
+
   #inputSearchArea {
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
+    margin-bottom: 3.5rem;
     #titleInput {
       font-size: 1.5rem;
       text-align: center;
@@ -50,11 +53,8 @@ html.light {
         outline: none;
         font-size: 1.2rem;
         padding: 5px 10px;
-        box-shadow: 0px 0px 10px $dark-tertiary;
+        box-shadow: 0px 0px 1px $dark-primary;
         transition: box-shadow ease-in 300ms;
-      }
-      #inputSearch:hover {
-        box-shadow: 1px 5px 15px $dark-tertiary;
       }
     }
   }
@@ -62,6 +62,7 @@ html.light {
   #drinkDescription {
     display: flex;
     align-items: center;
+    margin-bottom: 1.875rem;
 
     #imgDescription,
     #infosDescription {
@@ -94,9 +95,9 @@ html.light {
 
     #iconDrink {
       position: absolute;
-      right: -10px;
-      bottom: -20px;
-      width: 7%;
+      right: 2rem;
+      top: 90%;
+      width: 3%;
       filter: contrast(0);
     }
   }

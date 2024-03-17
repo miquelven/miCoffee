@@ -1,5 +1,5 @@
 <template>
-  <template v-if="isPending == true">
+  <template v-if="isPending">
     <div id="drinkInfoArea">
       <div class="cardInfo">
         <div class="cardInfoImgArea">

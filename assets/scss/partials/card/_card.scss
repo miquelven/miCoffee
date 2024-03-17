@@ -3,30 +3,18 @@ html.light {
   .containerCards {
     .card {
       background-color: $light-primary;
-      box-shadow: 6px 6px 00px $tertiary;
 
       h3 {
         color: $dark-primary;
       }
-      .cardInfoImg {
-        box-shadow: 4px 4px 0px $primary !important;
-      }
       .contentCardInfo {
         button {
-          background-color: transparent;
-          box-shadow: 4px 4px 0px $primary !important;
+          background-color: $secondary;
         }
         button:hover {
-          box-shadow: 8px 8px 0px $primary !important;
+          color: $light-primary;
+          background-color: $primary;
         }
-      }
-    }
-    .card:hover {
-      box-shadow: 6px 6px 0px $primary;
-    }
-    .card:hover {
-      .cardInfoImg {
-        box-shadow: 6px 8px 0px $primary !important;
       }
     }
   }
@@ -34,6 +22,7 @@ html.light {
 
 // dark mode
 .containerCards {
+  margin-top: 6.25rem;
   position: relative;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -42,6 +31,8 @@ html.light {
   padding: 20px 10px;
 
   .card {
+    box-shadow: 0px 0px 4px $dark-tertiary;
+
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -51,7 +42,6 @@ html.light {
     height: 300px;
     background-color: rgba(255 255 255 / 0.05);
     border-radius: 20px;
-    box-shadow: 4px 10px 0px $primary;
     margin: 0 auto;
 
     transition: all ease 0.7s;
@@ -65,7 +55,6 @@ html.light {
       height: 220px;
       border-radius: 20px;
       transition: all ease 0.7s;
-      box-shadow: 5px 5px 0px $dark-primary;
     }
 
     .cardInfoImg {
@@ -129,7 +118,6 @@ html.light {
     height: 250px;
 
     button:hover {
-      box-shadow: 00px 0px 10px $dark-tertiary;
       scale: 0.95;
     }
   }

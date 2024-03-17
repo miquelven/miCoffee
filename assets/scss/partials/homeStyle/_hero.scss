@@ -1,5 +1,5 @@
 html.light {
-  #leftSide {
+  #heroContainer {
     text-shadow: none !important;
     h1 {
       color: $primary !important;
@@ -21,28 +21,28 @@ html.light {
   display: flex;
   align-items: center;
   position: relative;
-  min-height: calc(100vh - 100px);
-  margin-bottom: 40px;
+  min-height: calc(100vh - 400px);
+  margin-bottom: 80px;
+  position: relative;
 
-  #leftSide,
-  #rightSide {
+  #heroContainer {
     flex: 1;
-  }
-
-  #leftSide {
     display: flex;
+    align-items: center;
     flex-direction: column;
-    gap: 30px;
+    gap: 1.5rem;
     .purple-text-primary {
       color: $primary;
-      font-size: 3.6rem;
+      font-size: 3rem;
     }
     .purple-text-secondary {
       color: $primary;
     }
     h1 {
-      font-size: 2.8rem;
-      margin-bottom: 70px;
+      width: 75%;
+      text-align: center;
+      font-size: 3.75rem;
+      margin-bottom: 4.5rem;
       font-weight: bold;
     }
     p {
@@ -74,7 +74,7 @@ html.light {
   }
 
   @media screen and (max-width: 640px) {
-    #leftSide {
+    #heroContainer {
       position: relative;
       z-index: 2;
 
@@ -86,7 +86,7 @@ html.light {
   }
 
   @media screen and (max-width: 420px) {
-    #leftSide {
+    #heroContainer {
       h1 {
         font-size: 1.3rem;
         text-align: center;
@@ -100,29 +100,26 @@ html.light {
       }
     }
   }
+}
 
-  #rightSide {
-    img {
-      width: 80%;
-      margin: 0 auto;
-      transition: all ease-in 300ms;
-    }
-    img:hover {
-      filter: brightness(0.7);
-      border-radius: 10px;
-    }
-  }
+#hero::before {
+  content: "";
+  width: 41%;
+  height: 5px;
+  border-radius: 3px;
+  background-color: $primary;
+  position: absolute;
+  bottom: 0;
+  right: 4%;
+}
 
-  @media screen and (max-width: 640px) {
-    #rightSide {
-      position: absolute;
-      z-index: -1;
-      opacity: 70%;
-      top: 10px;
-
-      img {
-        opacity: 15%;
-      }
-    }
-  }
+#hero::after {
+  content: "";
+  width: 3%;
+  height: 5px;
+  border-radius: 3px;
+  background-color: $secondary;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }

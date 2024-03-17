@@ -116,7 +116,7 @@ html.light {
     }
     #iconDrink {
       bottom: -30px !important;
-      right: -30px !important;
+      right: 30px !important;
     }
     #infosDescription {
       gap: 20px !important;
@@ -133,6 +133,9 @@ html.light {
       p {
         font-size: 0.9rem !important;
       }
+    }
+    #iconDrink {
+      width: 6% !important;
     }
   }
 
@@ -154,8 +157,7 @@ html.light {
       }
     }
     #iconDrink {
-      width: 40% !important;
-      opacity: 40%;
+      display: none;
     }
   }
 

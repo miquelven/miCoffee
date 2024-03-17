@@ -3,7 +3,6 @@ html.light {
   #contact {
     input,
     textarea {
-      box-shadow: 4px 6px 0px $primary;
     }
 
     input:focus,
@@ -86,7 +85,7 @@ html.light {
         textarea {
           border-radius: 5px;
           outline: none;
-          box-shadow: 1px 2px 20px $dark-primary;
+          border: 1px solid $dark-tertiary;
         }
 
         input,

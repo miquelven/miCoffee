@@ -31,7 +31,7 @@ html.light {
   margin: 50px auto;
   padding: 2.5rem;
   border-radius: 20px;
-  background-color: $primary;
+  background-color: $dark-secondary;
   box-shadow: 0px 0px 0.15rem $dark-tertiary;
   width: 80%;
   display: flex;
@@ -63,7 +63,7 @@ html.light {
       }
 
       select {
-        background-color: $dark-secondary;
+        background-color: $primary;
         border-radius: 5px;
         font-size: 0.95rem;
         outline: none;
@@ -75,21 +75,21 @@ html.light {
     }
 
     button {
-      color: $dark-tertiary;
+      color: $tertiary;
       font-size: 0.9rem;
       font-weight: bold;
       text-transform: uppercase;
-      background: $secondary;
+      background: $primary;
       border-radius: 10px;
       padding: 6px 14px;
-      align-self: center;
+      align-self: end;
       transition: all ease 300ms;
     }
 
     button:hover {
       color: $tertiary;
       transform: scale(1.05);
-      background: $dark-secondary;
+      background: $dark-primary;
     }
   }
 }

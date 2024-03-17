@@ -38,7 +38,7 @@
       At Midrinks, we celebrate the diversity, creativity, and passion that make
       the world of beverages truly extraordinary.
     </p>
-    <p>Appreciatively,</p>
+    <p>Appreciatively.</p>
     <span data-aos="fade-up" data-aos-delay="600">The Midrinks Team</span>
   </section>
 </template>

@@ -15,9 +15,9 @@ html.light {
 
 // dark mode
 #about {
+  border: 2px solid $secondary;
   background-color: $dark-primary;
   border-radius: 10px;
-  box-shadow: 5px 8px 0px $primary;
   padding: 20px 30px;
   margin: 80px auto;
   max-width: 1000px;

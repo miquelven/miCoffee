@@ -109,7 +109,7 @@ html.light {
   border-radius: 3px;
   background-color: $primary;
   position: absolute;
-  bottom: 0;
+  bottom: -100px;
   right: 4%;
 }
 
@@ -120,13 +120,13 @@ html.light {
   border-radius: 3px;
   background-color: $secondary;
   position: absolute;
-  bottom: 0;
+  bottom: -100px;
   right: 0;
 }
 
 @media screen and (max-width: 640px) {
   #hero::before,
   #hero::after {
-    bottom: -50px;
+    bottom: -50px !important;
   }
 }

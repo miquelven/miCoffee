@@ -27,7 +27,7 @@
         <div>
           <img
             id="drinks"
-            src="../../assets/images/drinks.png"
+            src="../../assets/images/drinks.webp"
             alt="Imagem de bebidas"
           />
         </div>
@@ -52,7 +52,7 @@
         </p>
         <img
           id="iconDrink"
-          src="../../assets/images/drinkIcon.png"
+          src="../../assets/images/drinkIcon.webp"
           alt="Icone de uma bebida"
           data-aos="fade-left"
           data-aos-delay="700"

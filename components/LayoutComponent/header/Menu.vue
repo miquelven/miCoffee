@@ -8,9 +8,9 @@
       </li>
       <button @click="toggleDark()">
         <template v-if="isDark == true">
-          <Icon name="uil:sun" color="white" size="24" />
+          <Icon name="uil:sun" color="light" size="24" />
         </template>
-        <template v-else>
+        <template v-if="isDark == false">
           <Icon name="uil:moon" color="black" size="24" />
         </template>
       </button>

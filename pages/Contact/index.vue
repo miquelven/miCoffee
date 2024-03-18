@@ -1,7 +1,7 @@
 <template>
   <section id="contact" data-aos="zoom-in">
     <div>
-      <h2>Get in Touch</h2>
+      <h4>Get in Touch</h4>
       <p>
         Get in Touch Welcome to our contact page! We're thrilled to know that
         you're interested in reaching out to us. Whether you have a question,
@@ -10,7 +10,7 @@
       </p>
     </div>
     <div>
-      <h2>Contact Form:</h2>
+      <h4>Contact Form:</h4>
       <p>
         Please fill out the form below, and we'll get back to you as soon as
         possible. Make sure to provide your correct contact information so we
@@ -45,7 +45,7 @@
       </form>
     </div>
     <div data-aos="fade-up">
-      <h2>Phone:</h2>
+      <h4>Phone:</h4>
       <p>
         If you prefer to speak with us directly, you can call our phone number
         <a href="">202-555-0191</a> during business hours. Our team will be
@@ -53,14 +53,14 @@
       </p>
     </div>
     <div data-aos="fade-up">
-      <h2>Email:</h2>
+      <h4>Email:</h4>
       <p>
         <a href="">contact@midrinks.com</a> . We'll do our best to respond to
         all messages as quickly as possible.
       </p>
     </div>
     <div data-aos="fade-up">
-      <h2>Social Media:</h2>
+      <h4>Social Media:</h4>
       <p>
         Feel free to follow us on our social media channels to stay updated on
         the latest news, promotions, and special events.
@@ -78,7 +78,7 @@
       </ul>
     </div>
     <div data-aos="fade-up">
-      <h2>Location:</h2>
+      <h4>Location:</h4>
       <p>
         If you'd like to visit us in person, we're located at
         <a href=""

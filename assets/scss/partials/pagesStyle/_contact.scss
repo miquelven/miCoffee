@@ -20,7 +20,7 @@ html.light {
       background-color: $dark-secondary !important;
       color: $secondary;
     }
-    h2 {
+    h4 {
       color: $dark-secondary;
     }
     p {
@@ -41,12 +41,12 @@ html.light {
 
   max-width: 1000px;
   div {
-    h2 {
+    h4 {
       font-size: 2rem;
       color: $primary;
       position: relative;
     }
-    h2::before {
+    h4::before {
       content: "";
       width: 10px;
       height: 10px;
@@ -69,7 +69,7 @@ html.light {
       display: flex;
       justify-content: center;
       max-width: 40%;
-      margin: 0 auto;
+      margin: 60px auto;
       flex-direction: column;
       gap: 10px;
       label {
@@ -179,11 +179,11 @@ html.light {
   #contact {
     width: 100%;
     div {
-      h2 {
+      h4 {
         font-size: 1.6rem !important;
       }
 
-      h2::before {
+      h4::before {
         top: 15px;
       }
     }

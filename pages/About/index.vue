@@ -1,8 +1,8 @@
 <template>
   <section id="about" data-aos="zoom-in">
-    <h2 data-aos="fade-up" data-aos-delay="300">
+    <h3 data-aos="fade-up" data-aos-delay="300">
       <span>Explore</span> and <span>Celebrate</span> Beverage Culture
-    </h2>
+    </h3>
     <p>
       Welcome to Midrinks, where we delve deep into the fascinating world of
       beverages to bring you a unique experience of discovery and celebration.

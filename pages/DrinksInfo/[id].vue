@@ -4,7 +4,7 @@
       <div class="cardInfo">
         <div class="cardInfoImgArea">
           <div class="cardInfoContent">
-            <h2>---------</h2>
+            <h4>---------</h4>
             <p>
               <span>-------</span>
               ---------
@@ -15,13 +15,9 @@
         </div>
 
         <div id="cardInfoIngredients">
-          <h2>--------------</h2>
+          <h5>--------------</h5>
           <ul>
-            <li
-              v-for="(item, index) of 6"
-              :key="index"
-              class="modelIngredientItem"
-            >
+            <li v-for="number of 6" :key="number" class="modelIngredientItem">
               <p>Loading...</p>
             </li>
           </ul>
@@ -40,7 +36,7 @@
             data-aos="fade-right"
             data-aos-delay="500"
           >
-            <h2>{{ drink.title }}</h2>
+            <h4>{{ drink.title }}</h4>
             <p>
               <span>Alcoholic:</span>
               {{ drink.alcoholic == "Alcoholic" ? "Yes" : "No" }}
@@ -51,7 +47,7 @@
         </div>
 
         <div id="cardInfoIngredients">
-          <h2 data-aos="fade-left" data-aos-delay="650">Ingredients</h2>
+          <h5 data-aos="fade-left" data-aos-delay="650">Ingredients</h5>
           <ul data-aos="fade-up" data-aos-delay="750">
             <li
               v-for="(ingredient, index) in drink.ingredients"
@@ -77,7 +73,6 @@
 
 <script setup lang="ts">
 const route = useRoute();
-const ingredients = ref<Ref | []>([]);
 
 const id = route.params.id;
 const useDrinks = useGetDrinks();
@@ -87,12 +82,4 @@ const { getDrink } = useDrinks;
 const { data: drinkInfo, pending: isPending } = await getDrink(
   `lookup.php?i=${id}`
 );
-
-if (isPending.value == false) {
-  for (let i = 0; i < drinkInfo.value[0].ingredients.length; i++) {
-    ingredients.value = await useFetch(
-      `https://www.thecocktaildb.com/images/ingredients/${drinkInfo.value[0].ingredients[i]}.png`
-    );
-  }
-}
 </script>

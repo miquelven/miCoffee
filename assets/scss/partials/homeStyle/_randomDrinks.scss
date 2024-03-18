@@ -238,13 +238,8 @@ html.light {
     }
   }
   #resetButton {
-    left: 0;
+    right: 0;
     top: 125px !important;
     width: 50px;
-    background: transparent !important;
-    box-shadow: none !important;
-    svg {
-      color: $primary !important;
-    }
   }
 }

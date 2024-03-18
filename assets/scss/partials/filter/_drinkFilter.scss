@@ -2,7 +2,7 @@
 html.light {
   #drinkFilter {
     background: transparent;
-    h2 {
+    h3 {
       color: $dark-secondary !important;
     }
     form {
@@ -40,7 +40,7 @@ html.light {
   flex-direction: column;
   gap: 40px;
 
-  h2 {
+  h3 {
     font-size: 2.8rem;
     color: $secondary;
   }
@@ -96,7 +96,7 @@ html.light {
 
 @media screen and (max-width: 940px) {
   #drinkFilter {
-    h2 {
+    h3 {
       font-size: 2.3rem;
     }
     form {
@@ -111,7 +111,7 @@ html.light {
 
 @media screen and (max-width: 690px) {
   #drinkFilter {
-    h2 {
+    h3 {
       font-size: 2.3rem;
     }
     form {
@@ -126,7 +126,7 @@ html.light {
 @media screen and (max-width: 450px) {
   #drinkFilter {
     width: 100%;
-    h2 {
+    h3 {
       font-size: 1.7rem;
     }
     form {

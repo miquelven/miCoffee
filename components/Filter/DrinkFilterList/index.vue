@@ -4,7 +4,7 @@
       <div class="imgArea">
         <img :src="drink.img" alt="Imagem de uma bebida" />
         <div>
-          <h3>{{ drink.name }}</h3>
+          <h5>{{ drink.name }}</h5>
           <button @click="redirectShowMore(drink.id)">Show More</button>
         </div>
       </div>

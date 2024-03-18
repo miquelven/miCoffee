@@ -76,11 +76,11 @@ export default function () {
             values.push(
               data[i].drinks.map((d: dataType) => {
                 let ingredientsValue = [];
-                let i = 1;
+                let a = 1;
                 do {
-                  ingredientsValue.push(d[`strIngredient${i}`]);
-                  i++;
-                } while (d[`strIngredient${i}`] !== null);
+                  ingredientsValue.push(d[`strIngredient${a}`]);
+                  a++;
+                } while (d[`strIngredient${a}`] !== null);
                 return {
                   id: d.idDrink,
                   title: d.strDrink,

@@ -2,7 +2,7 @@
 html.light {
   header {
     border-bottom: 2px solid $secondary !important;
-    h1 {
+    #logo {
       color: $dark-secondary;
     }
 
@@ -55,7 +55,7 @@ header {
     align-items: center;
   }
   // logo
-  h1 {
+  #logo {
     color: $tertiary;
     cursor: pointer;
     // logo detail

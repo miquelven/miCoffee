@@ -1,7 +1,7 @@
 <template>
   <header data-aos="fade-down" data-aos-delay="500">
     <div class="container">
-      <h1 @click="$router.push('/')"><span>Mi</span>Drinks</h1>
+      <p id="logo" @click="$router.push('/')"><span>Mi</span>Drinks</p>
       <div id="searchArea">
         <InputSearch :autofocus="true" placeholder="Search" />
         <Icon name="uil:search" color="#6c757d" id="searchIcon" />

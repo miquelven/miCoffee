@@ -9,7 +9,7 @@
           Loading...
         </div>
         <div class="contentCardInfo">
-          <h3>--------</h3>
+          <span>--------</span>
           <button>-------</button>
         </div>
       </li>
@@ -23,9 +23,9 @@
             <img :src="drink.img" alt="Imagem de uma bebida" />
           </div>
           <div class="contentCardInfo">
-            <h3>
+            <h5>
               {{ drink.title }}
-            </h3>
+            </h5>
             <button @click="redirectMoreInfo(drink.id)">Show More</button>
           </div>
         </li>

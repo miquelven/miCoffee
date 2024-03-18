@@ -85,7 +85,9 @@ html.light {
       text-align: center;
       transition: all ease 0.7s;
 
-      h3 {
+      span,
+      h5 {
+        display: block;
         margin-top: 10px;
         font-size: 1.3rem;
         font-weight: bold;

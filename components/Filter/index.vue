@@ -12,10 +12,9 @@
 
 <script setup lang="ts">
 interface Drink {
-  [items: string]: {
-    [item: string]: string;
-    name: string;
-  };
+  id: string;
+  img: string;
+  name: string;
 }
 
 const useDrinks = useGetDrinks();
@@ -24,6 +23,7 @@ const { getDrinkFiltered } = useDrinks;
 
 const drinksFiltered = ref<Drink[]>([]);
 
+// filtragem dos drinks
 const filterDrinks = async (filter: string[]) => {
   drinksFiltered.value = [];
   const letters = ["a", "c", "g"];
@@ -34,6 +34,7 @@ const filterDrinks = async (filter: string[]) => {
     }
   }
 };
+
 const verifyDrinksFiltered = (data: Ref<Drink[]>) => {
   let newDrinksFiltered: any[] = [];
   if (drinksFiltered.value.length == 0) drinksFiltered.value = data.value;

@@ -1,8 +1,8 @@
-interface dataType {
-  [items: string]: string[] | any;
+interface datasType {
+  [items: string]: any;
 }
 
-interface dType {
+interface dataType {
   [values: string]: string[];
 }
 
@@ -11,10 +11,8 @@ export default function () {
     const { data, pending } = await useFetch(
       `https://www.thecocktaildb.com/api/json/v1/1/${query}`,
       {
-        lazy: true,
-        server: false,
-        transform: (data: dataType) => {
-          return data.drinks.map((d: dType) => {
+        transform: (data: datasType) => {
+          return data.drinks.map((d: dataType) => {
             let ingredientsValue = [];
             let i = 1;
             do {
@@ -42,10 +40,8 @@ export default function () {
     const { data, pending } = await useFetch(
       `https://www.thecocktaildb.com/api/json/v1/1/filter.php?${query}`,
       {
-        lazy: true,
-        server: false,
-        transform: (data: dataType) => {
-          return data.drinks.map((d: dType) => {
+        transform: (data: datasType) => {
+          return data.drinks.map((d: dataType) => {
             return {
               name: d.strDrink,
               img: d.strDrinkThumb,
@@ -59,7 +55,7 @@ export default function () {
   };
 
   const getRandomDrinks = async () => {
-    let drinksArray: dataType[] = [];
+    let drinksArray: datasType[] = [];
     const { data, pending } = await useAsyncData(
       "drink-random",
       async () => {
@@ -73,13 +69,12 @@ export default function () {
         return drinksArray;
       },
       {
-        server: false,
         lazy: true,
         transform: (data) => {
           let values = [];
           for (let i = 0; i < drinksArray.length; i++) {
             values.push(
-              data[i].drinks.map((d: dType) => {
+              data[i].drinks.map((d: dataType) => {
                 let ingredientsValue = [];
                 let i = 1;
                 do {

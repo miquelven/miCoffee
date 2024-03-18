@@ -144,20 +144,22 @@ header {
     }
 
     #colorTheme {
-      top: 10px;
+      top: 14px;
       right: 35px;
     }
 
     #menuIcon {
       left: -40px;
-      top: 14px;
+      top: 17px;
       svg {
         color: #fff;
       }
     }
     #closeIcon {
-      right: 5px;
-      top: 10px;
+      margin-top: 8px;
+      svg {
+        margin-left: 4px;
+      }
     }
 
     ul {

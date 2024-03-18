@@ -7,10 +7,10 @@
         </NuxtLink>
       </li>
       <button @click="toggleDark()">
-        <template v-if="isDark == true">
+        <template v-show="isDark == true">
           <Icon name="uil:sun" color="light" size="24" />
         </template>
-        <template v-if="isDark == false">
+        <template v-show="isDark == false">
           <Icon name="uil:moon" color="black" size="24" />
         </template>
       </button>
@@ -30,8 +30,13 @@
     </span>
     <ul class="menu">
       <button id="colorTheme" @click="toggleDark()">
-        <Icon name="uil:sun" color="light" size="24" v-if="isDark == true" />
-        <Icon name="uil:moon" color="light" size="24" v-else />
+        <template v-show="isDark == true">
+          <Icon name="uil:sun" color="light" size="24" />
+        </template>
+
+        <template v-show="isDark == false">
+          <Icon name="uil:moon" color="black" size="24" />
+        </template>
       </button>
       <span>Menu</span>
 
@@ -60,12 +65,15 @@ const closeIcon = ref<HTMLElement | null>(null);
 
 const openMenu = () => {
   menuBar.value!.style.right = "0px";
+  menuBar.value!.style.position = "fixed";
   menuIcon.value!.style.display = "none";
   closeIcon.value!.style.display = "block";
 };
 
 const closeMenu = () => {
   menuBar.value!.style.right = "-100vw";
+  menuBar.value!.style.position = "absolute";
+
   closeIcon.value!.style.display = "none";
   setTimeout(() => {
     menuIcon.value!.style.display = "block";

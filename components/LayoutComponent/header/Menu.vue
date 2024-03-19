@@ -64,6 +64,7 @@ const menuIcon = ref<HTMLElement | null>(null);
 const closeIcon = ref<HTMLElement | null>(null);
 
 const openMenu = () => {
+  console.log("chamou");
   menuBar.value!.style.right = "0px";
   menuBar.value!.style.position = "fixed";
   menuIcon.value!.style.display = "none";
@@ -71,6 +72,8 @@ const openMenu = () => {
 };
 
 const closeMenu = () => {
+  showMenu.value = false;
+  console.log("chamoucloseMenu");
   menuBar.value!.style.right = "-100vw";
   menuBar.value!.style.position = "absolute";
 

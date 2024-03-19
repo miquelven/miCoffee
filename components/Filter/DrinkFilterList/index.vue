@@ -11,7 +11,7 @@
     </li>
   </ul>
 
-  <NuxtLink to="#drinkFilter" @click="updateScroll">
+  <button @click="moveToAnchor">
     <UPagination
       v-model="page"
       :total="drink"
@@ -39,7 +39,7 @@
         />
       </UTooltip>
     </UPagination>
-  </NuxtLink>
+  </button>
 </template>
 
 <script setup lang="ts">
@@ -73,14 +73,6 @@ const drink = computed(() => {
 });
 
 const router = useRouter();
-const route = useRoute();
-
-const updateScroll = () => {
-  if (route.fullPath == "/#drinkFilter") {
-    router.push(`/`);
-  }
-};
-onMounted(() => updateScroll());
 
 const redirectShowMore = (id: string) => {
   router.push(`drinksInfo/${id}`);
@@ -90,4 +82,9 @@ watch(
   () => props.drinks,
   () => update()
 );
+
+const moveToAnchor = () => {
+  const top = document.querySelector("#drinkFilter")?.clientHeight;
+  window.scrollTo(0, top!);
+};
 </script>

@@ -72,8 +72,7 @@ const openMenu = () => {
 
 const closeMenu = () => {
   showMenu.value = false;
-  menuBar.value!.style.right = "-100vw";
-  menuBar.value!.style.position = "block";
+  menuBar.value!.style.right = "-90vw";
 
   closeIcon.value!.style.display = "none";
   setTimeout(() => {

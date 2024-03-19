@@ -11,7 +11,7 @@
     </li>
   </ul>
 
-  <button @click="moveToAnchor">
+  <a @click="moveToAnchor">
     <UPagination
       v-model="page"
       :total="drink"
@@ -39,7 +39,7 @@
         />
       </UTooltip>
     </UPagination>
-  </button>
+  </a>
 </template>
 
 <script setup lang="ts">

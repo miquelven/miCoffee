@@ -16,15 +16,15 @@
       </button>
     </ul>
   </nav>
+  <span
+    id="menuIcon"
+    ref="menuIcon"
+    class="icon"
+    @click="() => (showMenu = true)"
+  >
+    <Icon name="uil:align-justify" color="white" size="24" />
+  </span>
   <nav id="menuBar" ref="menuBar">
-    <span
-      id="menuIcon"
-      ref="menuIcon"
-      class="icon"
-      @click="() => (showMenu = true)"
-    >
-      <Icon name="uil:align-justify" color="white" size="24" />
-    </span>
     <span id="closeIcon" ref="closeIcon" @click="() => (showMenu = false)">
       <Icon name="uil:times" color="white" size="32" />
     </span>
@@ -72,7 +72,8 @@ const openMenu = () => {
 
 const closeMenu = () => {
   showMenu.value = false;
-  menuBar.value!.style.right = "-90vw";
+  menuBar.value!.style.right = "-100vw";
+  menuBar.value!.style.position = "fixed";
 
   closeIcon.value!.style.display = "none";
   setTimeout(() => {

@@ -128,6 +128,17 @@ header {
       margin-left: 20px;
     }
   }
+
+  // menu mobile open
+  #menuIcon {
+    display: none;
+    left: -40px;
+    top: 17px;
+    svg {
+      color: #fff;
+    }
+  }
+
   // menu mobile
   #menuBar {
     display: none;
@@ -148,13 +159,6 @@ header {
       right: 35px;
     }
 
-    #menuIcon {
-      left: -40px;
-      top: 17px;
-      svg {
-        color: #fff;
-      }
-    }
     #closeIcon {
       margin-top: 8px;
       svg {
@@ -201,6 +205,9 @@ header {
     }
     #menuBar {
       display: flex;
+    }
+    #menuIcon {
+      display: block;
     }
   }
 }

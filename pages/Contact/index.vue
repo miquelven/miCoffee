@@ -107,6 +107,10 @@
 </template>
 
 <script setup lang="ts">
+useHead({
+  title: "Mi Drinks - Contact",
+});
+
 const email = ref<Ref | null>(null);
 const textarea = ref<Ref | null>(null);
 

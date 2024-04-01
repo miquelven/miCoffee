@@ -1,9 +1,9 @@
-# MiDrinks 🍷
+<h1 align='center'>MiDrinks 🍷</h1>
 
 &nbsp;
 &nbsp;
 
-![ezgif com-animated-gif-maker (2)](https://github.com/miquelven/games_in_a_game/assets/67767211/975a8394-475e-4608-9956-d70d57651c9a)
+![ezgif com-animated-gif-maker (5)](https://github.com/miquelven/MiCoin/assets/67767211/58432f35-89eb-48fc-a335-1bb5d08266d8)
 
 
 &nbsp;

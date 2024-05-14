@@ -15,9 +15,9 @@
       </li>
     </ul>
   </template>
-  <template v-else>
+  <template v-else-if="drinksData && drinksData.length > 0">
     <div data-aos="zoom-in" data-aos-delay="600">
-      <ul class="containerCards" v-if="drinksData">
+      <ul class="containerCards">
         <li class="card" v-for="(drink, index) in drinksData" :key="index">
           <div class="cardInfoImg">
             <img :src="drink.img" alt="Imagem de uma bebida" />
@@ -33,6 +33,10 @@
         </li>
       </ul>
     </div>
+  </template>
+
+  <template v-else>
+    <div id="noResults"><p>No results found</p></div>
   </template>
 </template>
 

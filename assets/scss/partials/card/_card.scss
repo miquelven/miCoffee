@@ -127,6 +127,17 @@ html.light {
   }
 }
 
+#noResults {
+  text-align: center;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    font-size: 3rem;
+  }
+}
+
 @media screen and (max-width: 1670px) {
   .containerCards {
     grid-template-columns: repeat(3, 1fr);
@@ -144,6 +155,11 @@ html.light {
   .containerCards {
     grid-template-columns: 1fr;
     gap: 60px;
+  }
+  #noResults {
+    p {
+      font-size: 2rem;
+    }
   }
 }
 

@@ -4,6 +4,7 @@
     <div id="content">
       <slot />
     </div>
+    <ToTopButton />
   </main>
   <LayoutComponentFooter />
 </template>

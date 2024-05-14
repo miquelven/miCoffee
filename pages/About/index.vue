@@ -46,5 +46,29 @@
 <script setup lang="ts">
 useHead({
   title: "Mi Drinks - About",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Discover the fascinating world of drinks with us. Find recipes, mixology tips, and informative articles to enhance your skills and knowledge. Connect with our community of beverage enthusiasts",
+    },
+    {
+      name: "keywords",
+      content:
+        "cocktails, drinks, mixology, recipes, bartending, beverages, cocktail culture, drink enthusiasts, cocktail recipes, drink recipes, bartender tips, mixology techniques, drink history, cocktail ingredients, cocktail community",
+    },
+    {
+      name: "author",
+      content: "MiDrinks",
+    },
+    {
+      name: "robots",
+      content: "index, follow",
+    },
+    {
+      name: "charset",
+      content: "UTF-8",
+    },
+  ],
 });
 </script>

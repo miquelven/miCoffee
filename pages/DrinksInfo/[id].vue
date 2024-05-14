@@ -80,4 +80,32 @@ const { getDrink } = useDrinks;
 const { data: drinkInfo, pending: isPending } = await getDrink(
   `lookup.php?i=${id}`
 );
+
+useHead({
+  title: `Mi Drinks - Information`,
+  meta: [
+    {
+      name: "description",
+      content:
+        "Discover detailed information about this delicious drink, including ingredients, preparation instructions, and history. Explore the art of mixology and get ready to savor a unique experience.",
+    },
+    {
+      name: "keywords",
+      content:
+        "drink information, cocktail details, mixology, ingredients, preparation, history, beverage, cocktail recipe, alcoholic drinks",
+    },
+    {
+      name: "author",
+      content: "MiDrinks",
+    },
+    {
+      name: "robots",
+      content: "index, follow",
+    },
+    {
+      name: "charset",
+      content: "UTF-8",
+    },
+  ],
+});
 </script>

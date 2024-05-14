@@ -104,6 +104,30 @@
 <script setup lang="ts">
 useHead({
   title: "Mi Drinks - Contact",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Contact us for questions, suggestions, or technical support. We're here to ensure the best experience as you explore and discover new drinks. Responses within 24 hours",
+    },
+    {
+      name: "keywords",
+      content:
+        "contact, support, questions, suggestions, technical support, drinks, cocktail recipes",
+    },
+    {
+      name: "author",
+      content: "MiDrinks",
+    },
+    {
+      name: "robots",
+      content: "index, follow",
+    },
+    {
+      name: "charset",
+      content: "UTF-8",
+    },
+  ],
 });
 
 const email = ref<Ref | null>(null);

@@ -41,6 +41,34 @@
 </template>
 
 <script setup lang="ts">
+useHead({
+  title: `Mi Drinks - Drinks`,
+  meta: [
+    {
+      name: "description",
+      content:
+        "Explore a variety of drinks that match the searched letters. Discover a wide selection of delicious and refreshing cocktails that meet your specific search criteria.",
+    },
+    {
+      name: "keywords",
+      content:
+        "drinks, cocktails, search results, alphabetical search, mixed drinks, beverage search, cocktail search, drink names, drink finder",
+    },
+    {
+      name: "author",
+      content: "MiDrinks",
+    },
+    {
+      name: "robots",
+      content: "index, follow",
+    },
+    {
+      name: "charset",
+      content: "UTF-8",
+    },
+  ],
+});
+
 const route = useRoute();
 const router = useRouter();
 

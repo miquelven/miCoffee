@@ -5,7 +5,9 @@
         <img :src="drink.img" alt="Imagem de uma bebida" />
         <div>
           <h5>{{ drink.name }}</h5>
-          <button @click="redirectShowMore(drink.id)">Show More</button>
+          <button @click="redirectShowMore(drink.name, Number(drink.id))">
+            Show More
+          </button>
         </div>
       </div>
     </li>
@@ -73,8 +75,10 @@ const drink = computed(() => {
 
 const router = useRouter();
 
-const redirectShowMore = (id: string) => {
-  router.push(`drinksInfo/${id}`);
+const redirectShowMore = (name: string, id: number) => {
+  localStorage.setItem("drinkId", JSON.stringify(id));
+  const formatedName = name.split(" ").join("-");
+  router.push(`drinksInfo/${formatedName}`);
 };
 
 watch(

@@ -24,7 +24,9 @@
             {{ ingredient }}
           </li>
         </ul>
-        <button @click="redirectShowMore(drinkInfo.id)">Show More</button>
+        <button @click="redirectShowMore(drinkInfo.title, drinkInfo.id)">
+          Show More
+        </button>
       </div>
     </div>
     <p>{{ drinkInfo.title }}</p>
@@ -37,7 +39,9 @@ defineProps(["drinkInfo", "isPending"]);
 
 const router = useRouter();
 
-const redirectShowMore = (id: string) => {
-  router.push(`drinksInfo/${id}`);
+const redirectShowMore = (name: string, id: number) => {
+  localStorage.setItem("drinkId", JSON.stringify(id));
+  const formatedName = name.split(" ").join("-");
+  router.push(`drinksInfo/${formatedName}`);
 };
 </script>

@@ -26,7 +26,9 @@
             <h5>
               {{ drink.title }}
             </h5>
-            <button @click="redirectMoreInfo(drink.id)">Show More</button>
+            <button @click="redirectShowMore(drink.title, drink.id)">
+              Show More
+            </button>
           </div>
         </li>
       </ul>
@@ -48,7 +50,9 @@ const { data: drinksData, pending: isPending } = await getDrink(
   `search.php?s=${query}`
 );
 
-const redirectMoreInfo = (id: string) => {
-  router.push(`/drinksInfo/${id}`);
+const redirectShowMore = (name: string, id: number) => {
+  localStorage.setItem("drinkId", JSON.stringify(id));
+  const formatedName = name.split(" ").join("-");
+  router.push(`/drinksInfo/${formatedName}`);
 };
 </script>

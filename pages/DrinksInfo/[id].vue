@@ -72,9 +72,7 @@
 </template>
 
 <script setup lang="ts">
-const route = useRoute();
-
-const id = route.params.id;
+const id = JSON.parse(localStorage.getItem("drinkId")!);
 const useDrinks = useGetDrinks();
 
 const { getDrink } = useDrinks;

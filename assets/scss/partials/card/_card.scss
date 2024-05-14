@@ -4,6 +4,10 @@ html.light {
     .card {
       background-color: $light-primary;
 
+      h5 {
+        color: $dark-primary;
+      }
+
       h3 {
         color: $dark-primary;
       }
@@ -12,8 +16,8 @@ html.light {
           background-color: $secondary;
         }
         button:hover {
-          color: $light-primary;
-          background-color: $primary;
+          color: $dark-tertiary;
+          background-color: $tertiary;
         }
       }
     }
@@ -31,15 +35,13 @@ html.light {
   padding: 20px 10px;
 
   .card {
-    box-shadow: 0px 0px 4px $dark-tertiary;
-
     display: flex;
     justify-content: center;
     align-items: flex-start;
     position: relative;
 
     width: 350px;
-    height: 300px;
+    height: 320px;
     background-color: rgba(255 255 255 / 0.05);
     border-radius: 20px;
     margin: 0 auto;
@@ -80,7 +82,7 @@ html.light {
       top: 252px;
       width: 100%;
       padding: 0 30px;
-      height: 35px;
+      height: 38px;
       overflow: hidden;
       text-align: center;
       transition: all ease 0.7s;
@@ -98,7 +100,6 @@ html.light {
         width: 50%;
         background: $primary;
         margin-top: 100px;
-        font-weight: bold;
         padding: 10px 0;
         border-radius: 20px;
         transition: all ease-in 0.2s;
@@ -121,6 +122,7 @@ html.light {
 
     button:hover {
       scale: 0.95;
+      filter: brightness(0.755);
     }
   }
 }

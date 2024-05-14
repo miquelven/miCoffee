@@ -4,7 +4,12 @@
 
     <div>
       <button @click="resetDrinkCardInfo" data-aos="zoom-in" id="resetButton">
-        <Icon name="uil:refresh" color="white" id="searchIcon" size="28" />
+        <Icon
+          name="uil:refresh"
+          class="text-black dark:text-white"
+          id="searchIcon"
+          size="28"
+        />
       </button>
       <ul>
         <template v-if="isPending.value == true">

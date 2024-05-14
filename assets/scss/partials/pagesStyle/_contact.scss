@@ -3,28 +3,23 @@ html.light {
   #contact {
     input,
     textarea {
-    }
-
-    input:focus,
-    textarea:focus {
-      background-color: $light-primary;
+      background: $secondary;
     }
 
     button {
-      border: 2px solid $primary !important;
-      background-color: transparent !important;
-      color: $dark-secondary;
-    }
-
-    button:hover {
       background-color: $dark-secondary !important;
       color: $secondary;
     }
-    h4 {
+
+    button:hover {
+      background-color: $secondary !important;
       color: $dark-secondary;
     }
+    h4 {
+      color: $dark-primary !important;
+    }
     p {
-      color: $primary !important;
+      color: $dark-tertiary !important;
       a {
         color: $dark-primary;
       }
@@ -43,23 +38,16 @@ html.light {
   div {
     h4 {
       font-size: 2rem;
-      color: $primary;
+      color: $bg-light;
       position: relative;
+      font-weight: 500;
     }
-    h4::before {
-      content: "";
-      width: 10px;
-      height: 10px;
-      background: $primary;
-      border-radius: 50%;
-      position: absolute;
-      top: 20px;
-      left: -17px;
-    }
+
     p {
       margin: 20px 0;
+      font-weight: 300;
       a {
-        color: $secondary;
+        color: $tertiary;
       }
       a:hover {
         text-decoration: underline;
@@ -78,14 +66,13 @@ html.light {
         gap: 15px;
 
         span {
-          font-weight: bold;
+          font-weight: 500;
         }
 
         input,
         textarea {
           border-radius: 5px;
           outline: none;
-          border: 1px solid $dark-tertiary;
         }
 
         input,
@@ -122,13 +109,11 @@ html.light {
         border-radius: 4px;
         font-weight: bold;
         padding: 4px 0;
-        border: 2px solid transparent;
         transition: all ease 300ms;
       }
 
       button:hover {
-        border: 2px solid $primary;
-        background-color: transparent;
+        background: #1b1d20;
       }
     }
 
@@ -181,10 +166,6 @@ html.light {
     div {
       h4 {
         font-size: 1.6rem !important;
-      }
-
-      h4::before {
-        top: 15px;
       }
     }
 

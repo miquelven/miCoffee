@@ -50,13 +50,6 @@
           fascinating universe of beverage types, many of which you never even
           imagined existed.
         </p>
-        <img
-          id="iconDrink"
-          src="../../assets/images/drinkIcon.webp"
-          alt="Icone de uma bebida"
-          data-aos="fade-left"
-          data-aos-delay="700"
-        />
       </div>
     </div>
   </section>

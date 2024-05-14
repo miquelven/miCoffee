@@ -22,7 +22,6 @@
       <UTooltip text="Previous page">
         <UButton
           icon="i-heroicons-arrow-small-left-20-solid"
-          color="purple"
           :ui="{ rounded: 'rounded-full' }"
           class="rtl:[&_span:first-child]:rotate-180 me-2"
           @click="update"

@@ -6,14 +6,15 @@ html.light {
     }
     div {
       #resetButton {
-        background: $dark-secondary;
+        background: $light-primary;
         border-radius: 50%;
       }
       #resetButton:hover {
-        opacity: 1;
+        filter: brightness(0.8);
       }
     }
     .infosDrink {
+      background-color: $light-primary;
       h4,
       h6 {
         color: $dark-primary;
@@ -25,6 +26,7 @@ html.light {
 
       button {
         background: $secondary;
+        box-shadow: none !important;
       }
 
       button:hover {
@@ -36,7 +38,8 @@ html.light {
     }
   }
   .pendingMode {
-    color: $primary;
+    color: $dark-tertiary;
+    background: $light-primary !important;
   }
 }
 
@@ -73,7 +76,7 @@ html.light {
       padding: 10px;
       z-index: 30;
       transition: all ease 300ms;
-      background: $primary;
+      background: $dark-secondary;
       border-radius: 50%;
     }
 
@@ -115,6 +118,7 @@ html.light {
         }
 
         .pendingMode {
+          background-color: $dark-secondary;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -133,7 +137,7 @@ html.light {
           display: flex;
         }
         .infosDrink {
-          border: 1px solid $dark-tertiary;
+          background-color: $dark-secondary;
           display: none;
           width: 100%;
           flex-direction: column;

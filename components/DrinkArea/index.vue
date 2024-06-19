@@ -23,7 +23,7 @@
     </div>
 
     <div id="drinkDescription">
-      <div id="imgDescription" data-aos="fade-right" data-aos-delay="700">
+      <div id="imgDescription" data-aos="fade-up" data-aos-delay="700">
         <div>
           <img
             id="drinks"
@@ -33,19 +33,19 @@
         </div>
       </div>
       <div id="infosDescription">
-        <h3 data-aos="fade-left" data-aos-delay="700">
+        <h3 data-aos="fade-up" data-aos-delay="700">
           Enjoy the unparalleled pleasure of a beverage at any time
         </h3>
-        <p data-aos="fade-left" data-aos-delay="800">
+        <p data-aos="fade-up" data-aos-delay="800">
           However, true satisfaction comes when we appreciate something and
           deeply understand what we are tasting.
         </p>
-        <p data-aos="fade-left" data-aos-delay="900">
+        <p data-aos="fade-up" data-aos-delay="900">
           In our space, we offer a rich source of information about a wide
           variety of beverages. Explore and discover new flavors through the
           smart filters available on our website
         </p>
-        <p data-aos="fade-left" data-aos-delay="1000">
+        <p data-aos="fade-up" data-aos-delay="1000">
           Take advantage of the opportunity to filter data and dive into the
           fascinating universe of beverage types, many of which you never even
           imagined existed.

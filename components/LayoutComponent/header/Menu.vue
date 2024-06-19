@@ -82,9 +82,14 @@ const closeMenu = () => {
 };
 
 const menuControl = () => (showMenu.value == true ? openMenu() : closeMenu());
+const scrollControl = () =>
+  showMenu.value == true
+    ? (document.querySelector("body")!.style.overflow = "hidden")
+    : (document.querySelector("body")!.style.overflow = "auto");
 
 watch(showMenu, () => {
   menuControl();
+  scrollControl();
 });
 
 const isDark = useDark({

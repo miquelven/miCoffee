@@ -13,7 +13,7 @@
     </li>
   </ul>
 
-  <a @click="moveToAnchor">
+  <a href="#" @click="moveToAnchor">
     <UPagination
       v-model="page"
       :total="drink"

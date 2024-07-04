@@ -23,7 +23,6 @@ const { getDrinkFiltered } = useDrinks;
 
 const drinksFiltered = ref<Drink[]>([]);
 
-// filtragem dos drinks
 const filterDrinks = async (filter: string[]) => {
   drinksFiltered.value = [];
   const letters = ["a", "c", "g"];

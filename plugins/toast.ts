@@ -10,7 +10,6 @@ export default defineNuxtPlugin((Nuxtapp) => {
     autoClose: 2000,
   } as ToastContainerOptions);
 
-  //antes de retornar configura
   toast.error = (message: Content) =>
     toast(message, {
       type: "error",

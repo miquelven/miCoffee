@@ -6,7 +6,7 @@
           <a href="#">{{ route.label }}</a>
         </NuxtLink>
       </li>
-      <button @click="toggleDark()">
+      <button id="toggleTheme" @click="toggleDark()">
         <template v-show="isDark == true">
           <Icon name="uil:sun" color="light" size="24" />
         </template>

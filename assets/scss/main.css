@@ -3,24 +3,20 @@
   margin: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: "Lato", sans-serif;
   background-color: #423442;
   color: #fdfdfd;
   overflow-x: hidden;
 }
-
 .container,
 #content {
   max-width: 1440px;
   margin: 0 auto;
 }
-
 #content {
   min-height: 100vh;
 }
-
 header {
   width: 100%;
   padding: 12px 0;
@@ -158,12 +154,10 @@ header #menuBar ul li:hover {
     display: flex;
   }
 }
-
 footer {
   width: 100%;
   margin-bottom: 20px;
 }
-
 #hero {
   display: flex;
   align-items: center;
@@ -265,7 +259,6 @@ footer {
     opacity: 15%;
   }
 }
-
 #coffeeArea {
   background: #332933;
   border-radius: 20px;
@@ -399,7 +392,6 @@ footer {
     width: 100% !important;
   }
 }
-
 @media screen and (max-width: 500px) {
   #inputSearchArea div {
     width: 100% !important;
@@ -547,7 +539,6 @@ footer {
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.6745098039);
 }
-
 @media screen and (max-width: 870px) {
   #drinksExamples h3 {
     font-size: 2rem;
@@ -673,7 +664,6 @@ footer {
   box-shadow: 4px 4px 10px #000 inset;
   scale: 0.95;
 }
-
 @media screen and (max-width: 1670px) {
   .containerCards {
     grid-template-columns: repeat(3, 1fr);
@@ -709,4 +699,4 @@ footer {
     top: 130px;
     height: 250px;
   }
-} /*# sourceMappingURL=main.css.map */
+}
